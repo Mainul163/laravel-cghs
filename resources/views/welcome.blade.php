@@ -406,6 +406,15 @@
         margin: 0;
         padding: 20px;
     }
+
+    p.note_text {
+        text-align: left;
+    }
+
+    .reg_form_system {
+        width: 60%;
+        margin: 0 auto;
+    }
     </style>
 
     <link rel="icon" type="image/x-icon" href="{{asset('dashboard/assets/img/favicon/favicon.ico')}}" />
@@ -444,7 +453,7 @@
 </head>
 
 <body class="antialiased">
-    <div class="text-center items-top justify-center min-h-screen bg-gray-100 ">
+    <div class="items-top justify-center min-h-screen bg-gray-100 ">
         @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
             @auth
@@ -461,11 +470,11 @@
         @endif
 
         <div>
-            <h1 class="reg_h1" style="">Registration Form</h1>
+            <h1 class="text-center reg_h1" style="">Registration Form</h1>
 
 
 
-            <div class="card-body">
+            <div class="card-body reg_form_system">
                 <form action="" method="POST">
                     @csrf
                     <div class="row mb-3">
@@ -499,46 +508,152 @@
                                 <option value="1991">1991</option>
                                 <option value="1992">1992</option>
                                 <option value="1993">1993</option>
+                                <option value="1994">1994</option>
+                                <option value="1995">1995</option>
+                                <option value="1996">1996</option>
+                                <option value="1997">1997</option>
+                                <option value="1998">1998</option>
+                                <option value="1999">1999</option>
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                                <option value="2003">2003</option>
+                                <option value="2004">2004</option>
+                                <option value="2005">2005</option>
+                                <option value="2006">2006</option>
+                                <option value="2007">2007</option>
+                                <option value="2008">2008</option>
+                                <option value="2009">2009</option>
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
                             </select>
                         </div>
                     </div>
 
 
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-default-name">Product Long
-                            Description</label>
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Mobile No <sapn
+                                class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <input type="text" class="form-control" id="mobile_number" name="mobile_number"
+                                placeholder="Mobile Number" />
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-default-name">Product Price</label>
-                        <div class="col-sm-10">
-                            <input type="price" class="form-control" id="subcategory_name" name="subcategory_name"
-                                placeholder="Sub Category Name" />
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-default-name">Product Quantity</label>
-                        <div class="col-sm-10">
-                            <input type="number " class="form-control" id="subcategory_name" name="subcategory_name"
-                                placeholder="Sub Category Name" />
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-default-name">SELECT SUB CATEGORY</label>
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Blood Group <sapn
+                                class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
 
-                            <select class="form-select" id="category_name" name="category"
-                                placeholder="Select Category">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                            <select class="form-select" id="blood_group" name="blood_group" placeholder="Blood Group">
+                                <option selected>select your blood group</option>
+                                <option value="O(+)">O(+)</option>
+                                <option value="O(-)">O(-)</option>
+                                <option value="A(+)">A(+)</option>
+                                <option value="A(-)">A(-)</option>
+                                <option value="B(+)">B(+)</option>
+                                <option value="B(-)">B(-)</option>
+                                <option value="AB(+)">AB(+)</option>
+                                <option value="AB(-)">AB(-)</option>
                             </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">T-Shirt Size <sapn
+                                class="text-danger">*</sapn></label>
+                        <div class="col-sm-10">
+
+                            <select class="form-select" id="t-shirt" name="t-shirt" placeholder="T-Shirt Size">
+                                <option selected>select your t-shirt size</option>
+                                <option value="M= Chest: 38”, Length: 26.5”">M= Chest: 38”, Length: 26.5”</option>
+                                <option value="L= Chest: 40”, Length: 27.5”">L= Chest: 40”, Length: 27.5”</option>
+                                <option value="XL= Chest: 42”, Length: 28.5”">XL= Chest: 42”, Length: 28.5”</option>
+                                <option value="XXL= Chest: 44”, Length: 29.5”">XXL= Chest: 44”, Length: 29.5”</option>
+
+
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Profession <sapn
+                                class="text-danger">*</sapn></label>
+                        <div class="col-sm-10">
+
+                            <select class="form-select" id="profession" name="profession" placeholder="Profession">
+                                <option selected>select your profession</option>
+                                <option value="businessman">Businessman</option>
+                                <option value="doctor">Doctor</option>
+                                <option value="engineer">Engineer</option>
+                                <option value="advocate">Advocate</option>
+                                <option value="job holder(govt)">Job Holder(Govt)</option>
+                                <option value="job holder (private)">Job Holder (Private)</option>
+                                <option value="teacher">Teacher</option>
+                                <option value="others">Others</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Name of profession
+                            institute</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="profession_institute"
+                                name="profession_institute" placeholder="profession institute name" />
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Name of designation</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="designation" name="designation"
+                                placeholder="designation" />
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Guest</label>
+                        <div class="col-sm-10 text-right">
+                            <input type="number" class="form-control" id="guest" name="guest" placeholder="guest"
+                                min="0" max="3" />
+                            <p class="text-danger note_text">*note(min 1 - max 3) </p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Registration Fee </label>
+                        <div class="col-sm-10">
+                            <p class='note_text'>1200</p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Guest Fee (per person)</label>
+                        <div class="col-sm-10">
+                            <p class='note_text'>500 <sapn class='text-danger'>(t-shirt not included) *</sapn>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Total</label>
+                        <div class="col-sm-10">
+                            <p class='note_text' name='total' id='total'>
+                                1200
+                            </p>
                         </div>
                     </div>
 
@@ -549,7 +664,26 @@
                         </div>
                     </div>
 
-                    <div class="row justify-content-end">
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Bkash Payment number</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="bkash" name="bkash"
+                                placeholder="Bkash Payment number" />
+                        </div>
+                    </div>
+
+
+
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">bkash transaction id</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="transaction_id" name="transaction_id"
+                                placeholder="bkash transaction id" />
+                        </div>
+                    </div>
+
+
+                    <div class="row justify-content-end text-center">
                         <div class="col-sm-10">
                             <button type="submit" class="btn btn-primary">Add Product </button>
                         </div>
@@ -557,6 +691,12 @@
                 </form>
             </div>
         </div>
+
+
+
+
+
+
     </div>
 
 
@@ -589,6 +729,33 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <script>
+    function myFunction() {
+        let a = document.getElementById("guest").value
+        console.log(a);
+
+
+    }
+    </script>
+
+    <script>
+    // Get a reference to the input element
+    const inputElement = document.getElementById('guest');
+
+    // Add an event listener to the input element
+    inputElement.addEventListener('input', function() {
+        // Get the value of the input element
+        const inputValue = inputElement.value;
+
+        // Do something with the value (e.g., display it)
+        total.innerHTML = (inputValue * 500) + 1200;
+        console.log('Input value:', inputValue);
+    });
+    </script>
+
+
+
 </body>
 
 </html>
