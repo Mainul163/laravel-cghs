@@ -15,19 +15,18 @@ class CreateGraduatedsTable extends Migration
     {
         Schema::create('graduateds', function (Blueprint $table) {
             $table->id();
-            $table->string('product_name');
-            $table->string('product_name');
-            $table->string('product_name');
-
-            $table->string('product_name');
-            $table->string('product_name');
-            $table->string('product_name');
-            $table->string('product_name');
-            $table->string('product_name');
-            $table->string('product_name');
-            $table->string('product_name');
-            $table->string('product_name');
-            $table->string('product_name');
+            $table->string('graduated_name');
+            $table->string('category');
+            $table->string('mobile_number');
+            $table->string('blood_group');
+            $table->string('t-shirt');
+            $table->string('profession');
+            $table->string('profession_institute');
+            $table->string('designation');
+            $table->string('guest');
+            $table->string('total');
+            $table->string('img');
+          
             
             $table->timestamps();
         });

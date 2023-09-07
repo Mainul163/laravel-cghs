@@ -658,9 +658,9 @@
                     </div>
 
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-default-name">Upload Product Image</label>
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Image</label>
                         <div class="col-sm-10">
-                            <input class="form-control" type="file" id="formFile" />
+                            <input class="form-control" type="file" name='img' id="formFile" />
                         </div>
                     </div>
 
