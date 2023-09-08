@@ -581,7 +581,8 @@
                                 <option value="M= Chest: 38”, Length: 26.5”">M= Chest: 38”, Length: 26.5”</option>
                                 <option value="L= Chest: 40”, Length: 27.5”">L= Chest: 40”, Length: 27.5”</option>
                                 <option value="XL= Chest: 42”, Length: 28.5”">XL= Chest: 42”, Length: 28.5”</option>
-                                <option value="XXL= Chest: 44”, Length: 29.5”">XXL= Chest: 44”, Length: 29.5”</option>
+                                <option value="XXL= Chest: 44”, Length: 29.5”">XXL= Chest: 44”, Length: 29.5”
+                                </option>
 
 
                             </select>
@@ -642,7 +643,8 @@
                     </div>
 
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-default-name">Guest Fee (per person)</label>
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Guest Fee (per
+                            person)</label>
                         <div class="col-sm-10">
                             <p class='note_text'>500 <sapn class='text-danger'>(t-shirt not included) *</sapn>
                             </p>
