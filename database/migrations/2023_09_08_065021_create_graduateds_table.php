@@ -15,8 +15,9 @@ class CreateGraduatedsTable extends Migration
     {
         Schema::create('graduateds', function (Blueprint $table) {
             $table->id();
+
             $table->string('graduated_name');
-            $table->string('category');
+            $table->string('batch');
             $table->string('mobile_number');
             $table->string('blood_group');
             $table->string('t-shirt');
@@ -26,8 +27,8 @@ class CreateGraduatedsTable extends Migration
             $table->string('guest');
             $table->string('total');
             $table->string('img');
-          
-            
+            $table->string('bkash');
+            $table->string('transaction_id');
             $table->timestamps();
         });
     }

@@ -491,8 +491,7 @@
                                 *</sapn></label>
                         <div class="col-sm-10">
 
-                            <select class="form-select" id="category_name" name="category"
-                                placeholder="Select Category">
+                            <select class="form-select" id="batch" name="batch" placeholder="Select your batch">
                                 <option selected> select your batch</option>
                                 <option value="1980">1980</option>
                                 <option value="1981">1981</option>
