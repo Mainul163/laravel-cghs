@@ -20,7 +20,7 @@ class CreateGraduatedsTable extends Migration
             $table->string('batch');
             $table->string('mobile_number');
             $table->string('blood_group');
-            $table->string('t-shirt');
+            $table->string('t_shirt');
             $table->string('profession');
             $table->string('profession_institute');
             $table->string('designation');

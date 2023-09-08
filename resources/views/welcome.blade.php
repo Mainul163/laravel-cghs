@@ -475,7 +475,7 @@
 
 
             <div class="card-body reg_form_system">
-                <form action="{{route('graduatedInfo')}}" method="POST">
+                <form action="{{route('graduatedInfo')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Graduated Name <sapn
@@ -575,7 +575,7 @@
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
 
-                            <select class="form-select" id="t-shirt" name="t-shirt" placeholder="T-Shirt Size">
+                            <select class="form-select" id="t-shirt" name="t_shirt" placeholder="T-Shirt Size">
                                 <option selected disabled>select your t-shirt size</option>
                                 <option value="M= Chest: 38”, Length: 26.5”">M= Chest: 38”, Length: 26.5”</option>
                                 <option value="L= Chest: 40”, Length: 27.5”">L= Chest: 40”, Length: 27.5”</option>
@@ -667,20 +667,22 @@
                     </div>
 
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-default-name">Bkash Payment number</label>
+                        <label class="col-sm-2 col-form-label" for="basic-default-name"> Payment number <sapn
+                                class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="bkash" name="bkash"
-                                placeholder="Bkash Payment number" />
+                            <input type="text" class="form-control" id="bkash" name="payment"
+                                placeholder=" Payment number" />
                         </div>
                     </div>
 
 
 
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-default-name">bkash transaction id</label>
+                        <label class="col-sm-2 col-form-label" for="basic-default-name"> transaction id <sapn
+                                class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="transaction_id" name="transaction_id"
-                                placeholder="bkash transaction id" />
+                                placeholder=" transaction id" />
                         </div>
                     </div>
 
