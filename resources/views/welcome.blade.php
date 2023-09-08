@@ -492,7 +492,7 @@
                         <div class="col-sm-10">
 
                             <select class="form-select" id="batch" name="batch" placeholder="Select your batch">
-                                <option selected> select your batch</option>
+                                <option selected disabled> select your batch</option>
                                 <option value="1980">1980</option>
                                 <option value="1981">1981</option>
                                 <option value="1982">1982</option>
@@ -557,7 +557,7 @@
                         <div class="col-sm-10">
 
                             <select class="form-select" id="blood_group" name="blood_group" placeholder="Blood Group">
-                                <option selected>select your blood group</option>
+                                <option selected disabled>select your blood group</option>
                                 <option value="O(+)">O(+)</option>
                                 <option value="O(-)">O(-)</option>
                                 <option value="A(+)">A(+)</option>
@@ -576,7 +576,7 @@
                         <div class="col-sm-10">
 
                             <select class="form-select" id="t-shirt" name="t-shirt" placeholder="T-Shirt Size">
-                                <option selected>select your t-shirt size</option>
+                                <option selected disabled>select your t-shirt size</option>
                                 <option value="M= Chest: 38”, Length: 26.5”">M= Chest: 38”, Length: 26.5”</option>
                                 <option value="L= Chest: 40”, Length: 27.5”">L= Chest: 40”, Length: 27.5”</option>
                                 <option value="XL= Chest: 42”, Length: 28.5”">XL= Chest: 42”, Length: 28.5”</option>
@@ -595,7 +595,7 @@
                         <div class="col-sm-10">
 
                             <select class="form-select" id="profession" name="profession" placeholder="Profession">
-                                <option selected>select your profession</option>
+                                <option selected disabled>select your profession</option>
                                 <option value="businessman">Businessman</option>
                                 <option value="doctor">Doctor</option>
                                 <option value="engineer">Engineer</option>
@@ -655,6 +655,7 @@
                             <p class='note_text' name='total' id='total'>
                                 1200
                             </p>
+                            <input name="total" id="name" value="{{ 1200}}" type="hidden">
                         </div>
                     </div>
 
