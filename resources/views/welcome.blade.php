@@ -475,7 +475,7 @@
 
 
             <div class="card-body reg_form_system">
-                <form action="" method="POST">
+                <form action="{{route('graduatedInfo')}}" method="POST">
                     @csrf
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Graduated Name <sapn
@@ -760,3 +760,4 @@
 </body>
 
 </html>
+<!-- <input name="total" id="name" value="{{ 1200}}" type="text"> -->

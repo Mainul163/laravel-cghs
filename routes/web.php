@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/cghs', [App\Http\Controllers\admin\CghsController::class, 'index'])->name('cghs');
+Route::post('/cghs/store', [App\Http\Controllers\admin\CghsController::class, 'store'])->name('graduatedInfo');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

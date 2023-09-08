@@ -13,4 +13,13 @@ class CghsController extends Controller
 
         return view('cghs.index');
     }
+
+
+
+    public function store(Request $request){
+
+        dd($request->all());
+
+       
+    }
 }
