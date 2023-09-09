@@ -58,9 +58,11 @@
                 <div class="main_Protfolio_design">
                     <div class="card">
                         <div class="card-body">
-                            <a href="{{route('pdf')}}" class="btn btn-primary dy_btn">Download PDF</a>
-                            <img src="{{asset('images/' .$row->img)}}" width='170px' height='auto' alt='image'
-                                class="border rounded" />
+
+                            <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('images/'.$row->img)))}}"" width='170px' height='auto' alt='image'
+                                class=" border rounded" />
+
+
                             <br><br>
 
                             <div class="display_deisgn">
@@ -153,7 +155,6 @@
                                             for="basic-default-name">{{$row->guest}}</label>
                                     </div>
                                 </div>
-
                                 <div class="row mb-3">
                                     <label class="col-sm-4 col-form-label" for="basic-default-name">Total : </label>
                                     <div class="col-sm-8">

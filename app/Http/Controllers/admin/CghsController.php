@@ -10,8 +10,8 @@ class CghsController extends Controller
     //
 
     public function index(){
-
-        return view('cghs.index');
+        $graduatedData=graduated::latest('id')->limit(1)->get();;
+        return view('cghs.index',compact('graduatedData'));
     }
 
 
@@ -36,9 +36,13 @@ class CghsController extends Controller
             
          
         // ]);
-
+         $total=($request->guest*500)+1200;
+       
         $newImageName =time().'-'.$request->name.'.'.$request->img->extension();
         $request->img->move(public_path('images'),$newImageName);
+
+        // $newImageName=$request->file('img')->getClientOriginalName();
+        // $request->file('img')->storeAs('public/images',$newImageName);
         $data=new graduated;
        
         $data->graduated_name=$request->graduated_name;
@@ -50,12 +54,12 @@ class CghsController extends Controller
         $data->profession_institute=$request->profession_institute;
         $data->designation=$request->designation;
         $data->guest=$request->guest;
-        $data->total=$request->total;
-        $data->img=$request->img;
+        $data->total=$total;
+        $data->img=$newImageName;
         $data->bkash=$request->payment;
         $data->transaction_id=$request->transaction_id;
         $data->save();
-
-       
+      
+        return redirect()->route('cghs');
     }
 }

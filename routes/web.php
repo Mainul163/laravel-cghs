@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\CghsController;
+use App\Http\Controllers\admin\CghspdfController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,9 +17,9 @@ use App\Http\Controllers\admin\CghsController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/cghs', [App\Http\Controllers\admin\CghsController::class, 'index'])->name('cghs');
+Route::get('/cghs/index', [App\Http\Controllers\admin\CghsController::class, 'index'])->name('cghs');
 Route::post('/cghs/store', [App\Http\Controllers\admin\CghsController::class, 'store'])->name('graduatedInfo');
-
+Route::get('/cghs/pdf', [App\Http\Controllers\admin\CghspdfController::class, 'export_pdf'])->name('pdf');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth','role:user'])->name('dashboard');
