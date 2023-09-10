@@ -36,6 +36,22 @@ class CghsController extends Controller
             
          
         // ]);
+
+          $request->validate([
+            'graduated_name' => 'required',
+            'batch' => 'required',
+
+            'mobile_number' => 'required',
+            'blood_group' => 'required',
+            't-shirt' => 'required',
+            'profession' => 'required',
+            'transaction_id' => 'required',
+            'payment' => 'required',
+            'img' => 'required|mimes:jpg,png,jpeg|size:5048',
+            
+         
+        ]);
+      dd($request->all());
          $total=($request->guest*500)+1200;
        
         $newImageName =time().'-'.$request->name.'.'.$request->img->extension();

@@ -415,6 +415,10 @@
         width: 60%;
         margin: 0 auto;
     }
+
+    .guest {
+        display: none;
+    }
     </style>
 
     <link rel="icon" type="image/x-icon" href="{{asset('dashboard/assets/img/favicon/favicon.ico')}}" />
@@ -454,21 +458,57 @@
 </head>
 
 <body class="antialiased">
-    <div class="items-top justify-center min-h-screen bg-gray-100 ">
-        @if (Route::has('login'))
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-            @auth
-            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-            @else
-            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
-            @if (Route::has('register'))
-            <a href="{{ route('register') }}"
-                class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-            @endif
-            @endauth
+    <div class="container-fluid navbar-light bg-light">
+        <div class="row">
+            <div class="com-md-12">
+                <nav class="container navbar navbar-expand-lg ">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="{{asset('logo/'.'CGHS.png')}}" alt="" width="60">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+
+
+
+
+
+                            </ul>
+                            <div class="d-flex">
+                                @if (Route::has('login'))
+                                <div class="top-0 right-0 px-6 py-4 sm:block">
+                                    @auth
+                                    <a href="{{ url('/dashboard') }}"
+                                        class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                                    @else
+                                    <a href="{{ route('login') }}"
+                                        class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+
+                                    @if (Route::has('register'))
+                                    <a href="{{ route('register') }}"
+                                        class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                                    @endif
+                                    @endauth
+                                </div>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </div>
-        @endif
+    </div>
+
+    <div class="items-top justify-center min-h-screen bg-gray-100 ">
+
 
         <div>
             <h1 class="text-center reg_h1" style="">Registration Form</h1>
@@ -483,7 +523,11 @@
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="subcategory_name" name="graduated_name"
-                                placeholder="graduated name" />
+                                placeholder="graduated name" class="@error('graduated_name') is-invalid @enderror"
+                                value="{{old('graduated_name')}}" />
+                            @error('graduated_name')
+                            <strong class=" text-danger">{{ $message }}</strong>
+                            @enderror
                         </div>
                     </div>
 
@@ -492,7 +536,8 @@
                                 *</sapn></label>
                         <div class="col-sm-10">
 
-                            <select class="form-select" id="batch" name="batch" placeholder="Select your batch">
+                            <select class="form-select" id="batch" name="batch" placeholder="Select your batch"
+                                class="@error('batch') is-invalid @enderror" value="{{old('batch')}}">
                                 <option selected disabled> select your batch</option>
                                 <option value="1980">1980</option>
                                 <option value="1981">1981</option>
@@ -539,6 +584,9 @@
                                 <option value="2022">2022</option>
                                 <option value="2023">2023</option>
                             </select>
+                            @error('batch')
+                            <strong class=" text-danger">{{ $message }}</strong>
+                            @enderror
                         </div>
                     </div>
 
@@ -548,7 +596,11 @@
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="mobile_number" name="mobile_number"
-                                placeholder="Mobile Number" />
+                                placeholder="Mobile Number" placeholder="Select your batch"
+                                class="@error('mobile_number') is-invalid @enderror" value="{{old('mobile_number')}}" />
+                            @error('mobile_number')
+                            <strong class=" text-danger">{{ $message }}</strong>
+                            @enderror
                         </div>
                     </div>
 
@@ -557,7 +609,8 @@
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
 
-                            <select class="form-select" id="blood_group" name="blood_group" placeholder="Blood Group">
+                            <select class="form-select" id="blood_group" name="blood_group" placeholder="Blood Group"
+                                class="@error('blood_group') is-invalid @enderror" value="{{old('blood_group')}}">
                                 <option selected disabled>select your blood group</option>
                                 <option value="O(+)">O(+)</option>
                                 <option value="O(-)">O(-)</option>
@@ -568,6 +621,9 @@
                                 <option value="AB(+)">AB(+)</option>
                                 <option value="AB(-)">AB(-)</option>
                             </select>
+                            @error('blood_group')
+                            <strong class=" text-danger">{{ $message }}</strong>
+                            @enderror
                         </div>
                     </div>
 
@@ -576,14 +632,17 @@
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
 
-                            <select class="form-select" id="t-shirt" name="t_shirt" placeholder="T-Shirt Size">
+                            <select class="form-select" id="t-shirt" name="t_shirt" placeholder="T-Shirt Size"
+                                class="@error('t_shirt') is-invalid @enderror" value="{{old('t_shirt')}}">
                                 <option selected disabled>select your t-shirt size</option>
                                 <option value="M= Chest: 38”, Length: 26.5”">M= Chest: 38”, Length: 26.5”</option>
                                 <option value="L= Chest: 40”, Length: 27.5”">L= Chest: 40”, Length: 27.5”</option>
                                 <option value="XL= Chest: 42”, Length: 28.5”">XL= Chest: 42”, Length: 28.5”</option>
                                 <option value="XXL= Chest: 44”, Length: 29.5”">XXL= Chest: 44”, Length: 29.5”
                                 </option>
-
+                                @error('t_shirt')
+                                <strong class=" text-danger">{{ $message }}</strong>
+                                @enderror
 
                             </select>
                         </div>
@@ -595,7 +654,8 @@
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
 
-                            <select class="form-select" id="profession" name="profession" placeholder="Profession">
+                            <select class="form-select" id="profession" name="profession" placeholder="Profession"
+                                class="@error('profession') is-invalid @enderror" value="{{old('profession')}}">
                                 <option selected disabled>select your profession</option>
                                 <option value="businessman">Businessman</option>
                                 <option value="doctor">Doctor</option>
@@ -607,6 +667,9 @@
                                 <option value="others">Others</option>
 
                             </select>
+                            @error('profession')
+                            <strong class=" text-danger">{{ $message }}</strong>
+                            @enderror
                         </div>
                     </div>
 
@@ -626,12 +689,32 @@
                                 placeholder="designation" />
                         </div>
                     </div>
-                    <div class="row mb-3">
+                    <div class="row mb-3" class="btn-group">
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Guest</label>
                         <div class="col-sm-10 text-right">
-                            <input type="number" class="form-control" id="guest" name="guest" placeholder="guest"
-                                min="0" max="3" />
-                            <p class="text-danger note_text">*note(min 1 - max 3) </p>
+
+                            <div class='guest'>
+                                <input type="radio" checked name="guest" value="0">0
+                            </div>
+
+                            <div class="btn-group" data-toggle="buttons">
+                                <label id='RADIO' class="btn btn-primary">
+                                    <input type="radio" name="guest" value="1">1
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="guest" value="2">2
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="guest" value="3">3
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="guest" value="4">4
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="guest" value="5">5
+                                </label>
+                            </div>
+
                         </div>
                     </div>
 
@@ -661,9 +744,14 @@
                     </div>
 
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-default-name">Image</label>
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Image <sapn class="text-danger">
+                                *</sapn></label>
                         <div class="col-sm-10">
-                            <input class="form-control" type="file" name='img' id="formFile" />
+                            <input class="form-control" type="file" name='img' id="formFile"
+                                class="@error('img') is-invalid @enderror" value="{{old('img')}}" />
+                            @error('img')
+                            <strong class=" text-danger">{{ $message }}</strong>
+                            @enderror
                         </div>
                     </div>
 
@@ -672,7 +760,12 @@
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="bkash" name="payment"
-                                placeholder=" Payment number" />
+                                placeholder=" Payment number" class="@error('payment') is-invalid @enderror"
+                                value="{{old('payment')}}" />
+
+                            @error('payment')
+                            <strong class=" text-danger">{{ $message }}</strong>
+                            @enderror
                         </div>
                     </div>
 
@@ -683,7 +776,11 @@
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="transaction_id" name="transaction_id"
-                                placeholder=" transaction id" />
+                                placeholder=" transaction id" class="@error('transaction_id') is-invalid @enderror"
+                                value="{{old('transaction_id')}}" />
+                            @error('transaction_id')
+                            <strong class=" text-danger">{{ $message }}</strong>
+                            @enderror
                         </div>
                     </div>
 
@@ -699,6 +796,7 @@
 
 
 
+        <div id="results"></div>
 
 
 
@@ -747,7 +845,8 @@
     <script>
     // Get a reference to the input element
     const inputElement = document.getElementById('guest');
-
+    const input = document.querySelector('inlineRadio').value;
+    console.log(input);
     // Add an event listener to the input element
     inputElement.addEventListener('input', function() {
         // Get the value of the input element
@@ -759,7 +858,20 @@
     });
     </script>
 
+    <script>
+    let results = document.getElementById("results");
 
+    // Set up a click handler on the parent of the radio buttons so that
+    // any clicks to the descendants will bubble up to the parent
+    document.querySelector("div.btn-group").addEventListener("click", function(evt) {
+        // Check if a radio button triggered the event
+        if (evt.target.type === "radio") {
+            // Populate the results area with the value of the clicked element
+            const inputValue = evt.target.value
+            total.innerHTML = (inputValue * 500) + 1200;
+        }
+    });
+    </script>
 
 </body>
 
