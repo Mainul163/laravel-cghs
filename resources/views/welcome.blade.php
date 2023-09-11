@@ -563,7 +563,7 @@
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="subcategory_name" name="graduated_name"
-                                placeholder="graduated name" class="@error('graduated_name') is-invalid @enderror"
+                                placeholder="Graduated Name" class="@error('graduated_name') is-invalid @enderror"
                                 value="{{old('graduated_name')}}" />
                             @error('graduated_name')
                             <strong class=" text-danger">{{ $message }}</strong>

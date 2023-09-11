@@ -47,6 +47,12 @@
         margin-bottom: 10px;
         font-size: 17px;
         }
+        .top_info_short .table tbody tr th, .top_info_short .table tbody tr td {
+        padding: 10px 10px;
+        }
+        .top_info_short .table tbody tr th {
+        width: 180px;
+        }
     </style>
 </head>
 
@@ -247,22 +253,51 @@
                                     <img src="{{asset('logo/'.'CGHS.png')}}" alt="" width="80">
                                 </div>
                                 <a href="{{route('pdf')}}" class="btn btn-primary dy_btn">Download PDF</a>
-                                <h2 class="text-center mt-2 mb-3">নিমন্ত্রণ পত্র</h2>
+                                <h2 class="text-center mt-2 mb-3">Invitation letter</h2>
                             </div>
                         </div>
-                        <div class="row">                            
-                            <div class="col-md-3 ">
-                                <img src="{{asset('images/' .$row->img)}}" width='130px' height='' alt='image'
+                        <div class="row"> 
+                            <div class="col-md-8 text-left top_info_short">
+                                <table class="table table-bordered tableborderless">                                    
+                                    <tbody>
+                                      <tr>
+                                        <th>Program Date</th>
+                                        <td >1st July 2023</td>
+                                      </tr>
+                                      <tr>
+                                        <th>Program Time</th>
+                                        <td>9am - 6pm</td>     
+                                      </tr>
+                                      <tr>
+                                        <th>Program Vanue</th>
+                                        <td>Dhaka, Banani</td>     
+                                      </tr>
+                                      <tr>
+                                        <th>Regestration Id</th>
+                                        <td>{{$row->id}}</td>     
+                                      </tr>
+                                      <tr>
+                                        <th>Graduated Name</th>
+                                        <td>{{$row->graduated_name}}</td>     
+                                      </tr>
+                                      <tr>
+                                        <th>Mobile Number</th>
+                                        <td>{{$row->mobile_number}}</td>     
+                                      </tr>
+                                      <tr>
+                                        <th>Guest Number</th>
+                                        <td>{{$row->guest}}</td>     
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                
+                            </div>                           
+                            <div class="col-md-4 text-right">
+                                <img src="https://cdn.pixabay.com/photo/2014/04/02/16/19/barcode-306926_1280.png" width='100%' height='40' alt="">
+                                <img src="{{asset('images/' .$row->img)}}" width='100%' height='' alt='image'
                                 class="border rounded ml" />
                             </div>
-                            <div class="col-md-8 text-left top_info_short">
-                                <p class="">1st July 2023, Sunday</p>
-                                <p class="">Registration Id : <span>graduated-1001{{$row->id}}</span></p>
-                                <p class="">Name : <span>{{$row->graduated_name}}</span> </p>
-                                <p class="">Batch : <span>{{$row->batch}}</span> </p>  
-                                <p class="">Mobile Number : <span>{{$row->mobile_number}}</span> </p>                              
-                                
-                            </div>
+                            
                         </div>
                         <div class="row">
                             {{-- <div class="col-md-6  mt-3">
@@ -282,30 +317,29 @@
                             <div class="col-md-12 mt-3">
                                   <table class="table table-bordered">                                    
                                     <tbody>
+                                    <tr>
+                                        <th>Profession</th>
+                                        <td>{{$row->profession}}</td>     
+                                    </tr>
+                                    <tr>
+                                        <th>Profession Institute</th>
+                                        <td>{{$row->profession_institute}}</td>     
+                                    </tr>
+                                    <tr>
+                                        <th>Designation</th>
+                                        <td>{{$row->designation}}</td>     
+                                    </tr>
+                                    <tr>
+                                        <th>Persent Address</th>
+                                        <td>Dhaka, Uttara</td>     
+                                    </tr>
+                                    <tr>
+                                        <th>T-Shirt Size</th>
+                                        <td>{{$row->t_shirt}}</td>     
+                                    </tr>
                                       <tr>
                                         <th>Blood Group</th>
                                         <td >{{$row->blood_group}}</td>
-
-                                      </tr>
-                                      <tr>
-                                        <th>Profession</th>
-                                        <td>{{$row->profession}}</td>     
-                                      </tr>
-                                      <tr>
-                                        <th>Profession Institute</th>
-                                        <td>{{$row->profession_institute}}</td>     
-                                      </tr>
-                                      <tr>
-                                        <th>Designation</th>
-                                        <td>{{$row->designation}}</td>     
-                                      </tr>
-                                      <tr>
-                                        <th>Guest</th>
-                                        <td>{{$row->guest}}</td>     
-                                      </tr>
-                                      <tr>
-                                        <th>Total</th>
-                                        <td>{{$row->total}}</td>     
                                       </tr>
                                       <tr>
                                         <th>Payment Number</th>
@@ -316,9 +350,12 @@
                                         <td>{{$row->transaction_id}}</td>     
                                       </tr>
                                       <tr>
-                                        <th>T-Shirt Size</th>
-                                        <td>{{$row->t_shirt}}</td>     
+                                        <th>Total Payment</th>
+                                        <td>{{$row->total}}</td>     
                                       </tr>
+                                      
+                                      
+                                      
                                     </tbody>
                                   </table>
                             </div>
