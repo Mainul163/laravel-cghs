@@ -419,12 +419,7 @@
     .guest {
         display: none;
     }
-    @media only screen and (max-width: 992px) {
-        .reg_form_system {
-            width: 100%;
-            margin: 0 auto;
-            }
-    }
+
             .site_logos .site_logo_Inner {
         display: inline-block !important;
         align-items: center;
@@ -444,6 +439,16 @@
 .site_logos .site_logo_Inner h3, .site_logos .site_logo_Inner h4 {
   margin: 0;
 }
+
+@media only screen and (max-width: 992px) {
+        .reg_form_system {
+            width: 100%;
+            margin: 0 auto;
+            }
+            .site_logo_Inner.text-left {
+            text-align: center !important;
+            }
+    }
     </style>
 
     <link rel="icon" type="image/x-icon" href="{{asset('dashboard/assets/img/favicon/favicon.ico')}}" />
