@@ -7,7 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet"
+        href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/PROJECT/user/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <style>
     p.card_info {
         font-size: 18px;
@@ -241,90 +242,90 @@
                                 <div class="top_logo text-center">
                                     <img src="{{asset('logo/'.'CGHS.png')}}" alt="" width="80">
                                 </div>
-                                
+
                                 <h2 class="text-center mt-2 mb-3">Invitation letter</h2>
                             </div>
                         </div>
-                        <div class="row">                            
+                        <div class="row">
                             <div class="col-md-3 ">
-                               
-                            <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('images/'.$row->img)))}}"" width='170px' height='auto' alt='image'
-                            class=" border rounded" />
+
+                                <img src="{{base_path().'images/CGHS.png' }}}}" width='170px' height='auto' alt='image'
+                                    class=" border rounded" />
 
                             </div>
                             <div class="col-md-8 text-left top_info_short">
                                 <p class="">1st July 2023, Sunday</p>
                                 <p class="">Registration Id : <span>graduated-1001{{$row->id}}</span></p>
                                 <p class="">Name : <span>{{$row->graduated_name}}</span> </p>
-                                <p class="">Batch : <span>{{$row->batch}}</span> </p>  
-                                <p class="">Mobile Number : <span>{{$row->mobile_number}}</span> </p>                              
-                                
+                                <p class="">Batch : <span>{{$row->batch}}</span> </p>
+                                <p class="">Mobile Number : <span>{{$row->mobile_number}}</span> </p>
+
                             </div>
                         </div>
                         <div class="row">
                             {{-- <div class="col-md-6  mt-3">
                                 
-                                <p class="card_info">Blood Group : <span>{{$row->blood_group}}</span> </p>                                
-                                <p class="card_info">Profession : <span>{{$row->profession}}</span> </p>
-                                <p class="card_info">Profession Institute : <span>{{$row->profession_institute}}</span></p>
-                                <p class="card_info">Designation : <span>{{$row->designation}}</span> </p>
-                                <p class="card_info">Guest : <span>{{$row->guest}}</span> </p>
-                                <p class="card_info">Total : <span>{{$row->total}}</span> </p>
-                                <p class="card_info">Payment Number : <span>{{$row->bkash}}</span> </p>
-                                <p class="card_info">Transaction Id : <span>{{$row->transaction_id}}</span> </p>
-                                <p class="card_info">T-Shirt Size : <span>{{$row->t_shirt}}</span> </p>
-                                
-                                
-                            </div> --}}
-                            <div class="col-md-12 mt-3">
-                                  <table class="table table-bordered">                                    
-                                    <tbody>
-                                      <tr>
-                                        <th>Blood Group</th>
-                                        <td >{{$row->blood_group}}</td>
+                                <p class="card_info">Blood Group : <span>{{$row->blood_group}}</span> </p>
+                            <p class="card_info">Profession : <span>{{$row->profession}}</span> </p>
+                            <p class="card_info">Profession Institute : <span>{{$row->profession_institute}}</span></p>
+                            <p class="card_info">Designation : <span>{{$row->designation}}</span> </p>
+                            <p class="card_info">Guest : <span>{{$row->guest}}</span> </p>
+                            <p class="card_info">Total : <span>{{$row->total}}</span> </p>
+                            <p class="card_info">Payment Number : <span>{{$row->bkash}}</span> </p>
+                            <p class="card_info">Transaction Id : <span>{{$row->transaction_id}}</span> </p>
+                            <p class="card_info">T-Shirt Size : <span>{{$row->t_shirt}}</span> </p>
 
-                                      </tr>
-                                      <tr>
+
+                        </div> --}}
+                        <div class="col-md-12 mt-3">
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <th>Blood Group</th>
+                                        <td>{{$row->blood_group}}</td>
+
+                                    </tr>
+                                    <tr>
                                         <th>Profession</th>
-                                        <td>{{$row->profession}}</td>     
-                                      </tr>
-                                      <tr>
+                                        <td>{{$row->profession}}</td>
+                                    </tr>
+                                    <tr>
                                         <th>Profession Institute</th>
-                                        <td>{{$row->profession_institute}}</td>     
-                                      </tr>
-                                      <tr>
+                                        <td>{{$row->profession_institute}}</td>
+                                    </tr>
+                                    <tr>
                                         <th>Designation</th>
-                                        <td>{{$row->designation}}</td>     
-                                      </tr>
-                                      <tr>
+                                        <td>{{$row->designation}}</td>
+                                    </tr>
+                                    <tr>
                                         <th>Guest</th>
-                                        <td>{{$row->guest}}</td>     
-                                      </tr>
-                                      <tr>
+                                        <td>{{$row->guest}}</td>
+                                    </tr>
+                                    <tr>
                                         <th>Total</th>
-                                        <td>{{$row->total}}</td>     
-                                      </tr>
-                                      <tr>
+                                        <td>{{$row->total}}</td>
+                                    </tr>
+                                    <tr>
                                         <th>Payment Number</th>
-                                        <td>{{$row->bkash}}</td>     
-                                      </tr>
-                                      <tr>
+                                        <td>{{$row->bkash}}</td>
+                                    </tr>
+                                    <tr>
                                         <th>Transaction Id</th>
-                                        <td>{{$row->transaction_id}}</td>     
-                                      </tr>
-                                      <tr>
+                                        <td>{{$row->transaction_id}}</td>
+                                    </tr>
+                                    <tr>
                                         <th>T-Shirt Size</th>
-                                        <td>{{$row->t_shirt}}</td>     
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                            </div>
+                                        <td>{{$row->t_shirt}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-
                 </div>
+
             </div>
         </div>
+    </div>
     </div>
 
 
