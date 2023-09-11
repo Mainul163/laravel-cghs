@@ -419,6 +419,31 @@
     .guest {
         display: none;
     }
+    @media only screen and (max-width: 992px) {
+        .reg_form_system {
+            width: 100%;
+            margin: 0 auto;
+            }
+    }
+            .site_logos .site_logo_Inner {
+        display: inline-block !important;
+        align-items: center;
+        width: auto;
+        text-align: left !important;
+        }
+        .site_logos {
+            text-align: center !important;
+            margin: 0 auto !important;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+        .site_logos .site_logo_Inner img {
+  width: 100px;
+}
+.site_logos .site_logo_Inner h3, .site_logos .site_logo_Inner h4 {
+  margin: 0;
+}
     </style>
 
     <link rel="icon" type="image/x-icon" href="{{asset('dashboard/assets/img/favicon/favicon.ico')}}" />
@@ -459,7 +484,7 @@
 
 <body class="antialiased">
 
-    <div class="container-fluid navbar-light bg-light">
+    {{-- <div class="container-fluid navbar-light bg-light">
         <div class="row">
             <div class="com-md-12">
                 <nav class="container navbar navbar-expand-lg ">
@@ -505,13 +530,28 @@
                 </nav>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="items-top justify-center min-h-screen bg-gray-100 ">
 
 
         <div>
-            <h1 class="text-center reg_h1" style="">Registration Form</h1>
+            <div class="container  text-center top_logo_section">
+                <div class="row site_logos pt-3 pb-5">
+                    <div class="site_logo_Inner ">
+                        <img src="{{asset('logo/'.'CGHS.png')}}" alt="" width="">
+                        {{-- <p>Chakaria Government High School <br> Programs & Events - 2024</p>
+                        <span> Chakaria Government High School <br> Programs & Events - 2024</span>                         --}}
+                    </div> 
+                    <div class="site_logo_Inner text-left">
+                      
+                        <h3>Chakaria Government High School</h3>
+                        <h4>Programs & Events - 2024</h4>
+                    </div>
+    
+                </div>   
+            </div>
+            <h5 class="text-center reg_h1" style="">Registration Form</h5>
 
 
 
