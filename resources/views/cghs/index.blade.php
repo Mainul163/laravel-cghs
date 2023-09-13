@@ -10477,9 +10477,10 @@ a.text-dark:hover, a.text-dark:focus {
                 </table>
             </div>
             <div class="reg_ings_section">
-                {!!  DNS1D::getBarcodeHTML(1231321, 'PHARMA')!!}
-                <p>50213644789</p>
-                <br><br>
+                <div class="bar_cd">
+                  {!!  DNS1D::getBarcodeHTML(1231321, 'PHARMA')!!}
+                  <p>50213644789</p>
+                </div>
                 <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('images/'.$row->img)))}}"" width='100%' height='200px' alt='image'
                 class=" border rounded" />
             </div>
@@ -10545,15 +10546,14 @@ a.text-dark:hover, a.text-dark:focus {
         
         
 
-
         .top_header p {
-          position: absolute;
-          right: 0;
-          display: inline-block;
-          width: 440px;
-          top: 8px;
-          font-weight: bold;
-          font-size: 14px;
+            position: absolute;
+            left: 100px;
+            display: inline-block;
+            width: 80%;
+            top: 4px;
+            font-weight: bold;
+            font-size: 14px;
         }
         .pdf_main_wrap{
         margin: 0 auto;
@@ -10608,7 +10608,7 @@ a.text-dark:hover, a.text-dark:focus {
         }
         .pdf_Reg_info {
         position: relative;
-        height: 300px;
+        height: 330px;
         }
         .reg_tbl_info {
         }
@@ -10621,8 +10621,9 @@ a.text-dark:hover, a.text-dark:focus {
         }
         .reg_table tr th, .reg_table tr td {
         border: 1px solid #dee2e6;
-        padding: 4px 20px;
+        padding: 5px 20px;
         text-align: left;
+        font-size: 14px;
         }
         .reg_table tr th {
         }
@@ -10636,6 +10637,7 @@ a.text-dark:hover, a.text-dark:focus {
             border: 1px solid #dee2e6;
         padding: 4px 20px;
         text-align: left;
+        font-size: 14px;
         }
         .table_btm {
         width: 100%;
@@ -10665,9 +10667,19 @@ a.text-dark:hover, a.text-dark:focus {
         position: absolute;
         right: 0;
         }
-        
-    
-
+        .bar_cd {
+        text-align: center !important;
+        margin: 0 auto;
+        position: absolute;
+        right: 18px;
+      }
+      .reg_ings_section img {
+        width: 130px;
+        object-fit: cover;
+        height: 165px;
+        margin-top: 70px;
+      }
+          
 
 
         

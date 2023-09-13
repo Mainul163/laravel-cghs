@@ -82,56 +82,63 @@
 
 
     <div class="pdf_main_wrap">
-        <div class="top_header">
-            <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'CGHS.png')))}}" width='170px' height='auto' alt='image'
-                class=" border rounded"  width="100" height="100"/>
-                
-            <h3>Registration Letter</h3>
+        <div class="top_header">           
+
+                <div class="top_header">
+                    <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'CGHS.png')))}}" alt="" width="80">
+                    <p>CHAKARIA GOVT HIGH SCHOOL<br>
+                      EIIN No: 106169, Established: 1930, Address: Chakaria-4741, Coxs Bazar, Chattogram.
+                      <br>
+                      CGHS Alumni Association - 2024</p>
+                    
+                </div>         
         </div>
         <div class="pdf_Reg_info">
-            <div class="reg_tbl_info">
-                <table class="reg_table">                                    
-                    <tbody>
-                    <tr>
-                        <th>Program Date</th>
-                        <td >1st July 2023</td>
-                    </tr>
-                    <tr>
-                        <th>Program Time</th>
-                        <td>9am - 6pm</td>     
-                    </tr>
-                    <tr>
-                        <th>Program Vanue</th>
-                        <td>Dhaka, Banani</td>     
-                    </tr>
-                    <tr>
-                        <th>Regestration Id</th>
-                        <td>{{$row->id}}</td>     
-                    </tr>
-                    <tr>
-                        <th>Graduated Name</th>
-                        <td>{{$row->graduated_name}}</td>     
-                    </tr>
-                    <tr>
-                        <th>Mobile Number</th>
-                        <td>{{$row->mobile_number}}</td>     
-                    </tr>
-                    <tr>
-                        <th>Guest Number</th>
-                        <td>{{$row->guest}}</td>     
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="reg_ings_section">
-                <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'br.webp')))}}" width='100%' height='50px' alt='image'
-                class=" border rounded" />
-                <br><br>
-                <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('images/'.$row->img)))}}"" width='100%' height='200px' alt='image'
-                class=" border rounded" />
-            </div>
-            
-        </div>
+            <h3>Registration Letter</h3>
+              <div class="reg_tbl_info">
+                  <table class="reg_table">                                    
+                      <tbody>
+                      <tr>
+                          <th>Program Date</th>
+                          <td >1st July 2023</td>
+                      </tr>
+                      <tr>
+                          <th>Program Time</th>
+                          <td>9am - 6pm</td>     
+                      </tr>
+                      <tr>
+                          <th>Program Vanue</th>
+                          <td>Dhaka, Banani</td>     
+                      </tr>
+                      <tr>
+                          <th>Regestration Id</th>
+                          <td>{{$row->id}}</td>     
+                      </tr>
+                      <tr>
+                          <th>Graduated Name</th>
+                          <td>{{$row->graduated_name}}</td>     
+                      </tr>
+                      <tr>
+                          <th>Mobile Number</th>
+                          <td>{{$row->mobile_number}}</td>     
+                      </tr>
+                      <tr>
+                          <th>Guest Number</th>
+                          <td>{{$row->guest}}</td>     
+                      </tr>
+                      </tbody>
+                  </table>
+              </div>
+              <div class="reg_ings_section">
+                  <div class="bar_cd">
+                    {!!  DNS1D::getBarcodeHTML(1231321, 'PHARMA')!!}
+                    <p>50213644789</p>
+                  </div>
+                  <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('images/'.$row->img)))}}"" width='100%' height='200px' alt='image'
+                  class=" border rounded" />
+              </div>
+              
+          </div>
         <div class="graduatred_info">
             <table class="table_btm">                                    
                 <tbody>
@@ -191,7 +198,17 @@
     <style>
         
         
-        
+
+
+        .top_header p {
+            position: absolute;
+            left: 100px;
+            display: inline-block;
+            width: 80%;
+            top: 4px;
+            font-weight: bold;
+            font-size: 14px;
+        }
         .pdf_main_wrap{
         margin: 0 auto;
         width: 600px;
@@ -203,10 +220,25 @@
         clear: both;
         width: 100%;
         position: relative;
-        height: 160px;
+        height: 120px;
             
         }
-
+        .top_header h3 {
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            transform: translate(-50%,0);
+            
+        }
+        .pdf_Reg_info h3 {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translate(-50%,0);
+            height: 200px;
+            
+        }
         .top_header img {
         display: inline-block;
             position: absolute;
@@ -219,6 +251,7 @@
         position: absolute;
         left: 0;
         padding-right: 20px;
+        top: 50px;
         }
         .reg_ings_section {
         width: 190px;
@@ -230,15 +263,8 @@
         .pdf_Reg_info {
         position: relative;
         height: 300px;
-        top: 50px;
         }
-        .pdf_Reg_info h3 {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            transform: translate(-50%,0);
-            height: 200px;
-            
+        .reg_tbl_info {
         }
         .reg_table {
         width: 100%;
@@ -249,7 +275,7 @@
         }
         .reg_table tr th, .reg_table tr td {
         border: 1px solid #dee2e6;
-        padding: 4px 20px;
+        padding: 5px 20px;
         text-align: left;
         }
         .reg_table tr th {
@@ -293,6 +319,20 @@
         position: absolute;
         right: 0;
         }
+        .bar_cd {
+        text-align: center !important;
+        margin: 0 auto;
+        position: absolute;
+        right: 18px;
+      }
+      .reg_ings_section img {
+        width: 130px;
+        object-fit: cover;
+        height: 165px;
+        margin-top: 70px;
+      }
+          
+
 
 
         
