@@ -198,9 +198,7 @@
 
     <style>
         
-        
-
-
+      
         .top_header p {
             position: absolute;
             left: 100px;
@@ -263,7 +261,7 @@
         }
         .pdf_Reg_info {
         position: relative;
-        height: 300px;
+        height: 330px;
         }
         .reg_tbl_info {
         }
@@ -278,6 +276,7 @@
         border: 1px solid #dee2e6;
         padding: 5px 20px;
         text-align: left;
+        font-size: 14px;
         }
         .reg_table tr th {
         }
@@ -291,6 +290,7 @@
             border: 1px solid #dee2e6;
         padding: 4px 20px;
         text-align: left;
+        font-size: 14px;
         }
         .table_btm {
         width: 100%;
@@ -335,6 +335,7 @@
           
 
 
+        
 
         
     
