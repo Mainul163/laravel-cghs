@@ -5,13 +5,27 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\graduated;
+use Barryvdh\DomPDF\Facade\Pdf;
 class CghsController extends Controller
 {
     //
 
     public function index(){
-        $graduatedData=graduated::latest('id')->limit(1)->get();;
-        return view('cghs.index',compact('graduatedData'));
+        // $graduatedData=graduated::latest('id')->limit(1)->get();;
+        // return view('cghs.index',compact('graduatedData'));
+        $graduatedData=graduated::latest('id')->limit(1)->get();
+
+        $pdf = \PDF::loadView('cghs.pdf',[
+          
+            'graduatedData'=>$graduatedData,
+          
+          
+        ]) ->setOptions(['enable_php' => true])
+        ->setPaper('A4', 'portrait');
+
+       
+        // $pdf = PDF::loadView('communityDetails.pdf', compact('commun_details','communityDetailsTitle'))->setOptions(['defaultFont' => 'sans-serif']);
+        return $pdf->download('cghs.pdf');
     }
 
 
@@ -49,8 +63,7 @@ class CghsController extends Controller
             
          
         // ]);
-        $number=mt_rand(1000000000,9999999999);
-        $updateNum=0+ $number;
+      
    
         $total=($request->guest*500)+1200;
        
@@ -74,7 +87,7 @@ class CghsController extends Controller
         $data->img=$newImageName;
         $data->bkash=$request->payment;
         $data->transaction_id=$request->transaction_id;
-        $data->reg_num= $updateNum;
+       
         $data->save();
       
         return redirect()->route('cghs');

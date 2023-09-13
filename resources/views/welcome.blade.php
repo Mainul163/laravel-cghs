@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>CGHS Program</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -420,34 +420,39 @@
         display: none;
     }
 
-            .site_logos .site_logo_Inner {
+    .site_logos .site_logo_Inner {
         display: inline-block !important;
         align-items: center;
         width: auto;
         text-align: left !important;
-        }
-        .site_logos {
-            text-align: center !important;
-            margin: 0 auto !important;
-            justify-content: center;
-            align-content: center;
-            align-items: center;
-        }
-        .site_logos .site_logo_Inner img {
-  width: 100px;
-}
-.site_logos .site_logo_Inner h3, .site_logos .site_logo_Inner h4 {
-  margin: 0;
-}
+    }
 
-@media only screen and (max-width: 992px) {
+    .site_logos {
+        text-align: center !important;
+        margin: 0 auto !important;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .site_logos .site_logo_Inner img {
+        width: 100px;
+    }
+
+    .site_logos .site_logo_Inner h3,
+    .site_logos .site_logo_Inner h4 {
+        margin: 0;
+    }
+
+    @media only screen and (max-width: 992px) {
         .reg_form_system {
             width: 100%;
             margin: 0 auto;
-            }
-            .site_logo_Inner.text-left {
+        }
+
+        .site_logo_Inner.text-left {
             text-align: center !important;
-            }
+        }
     }
     </style>
 
@@ -496,14 +501,13 @@
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#">
                             <img src="{{asset('logo/'.'CGHS.png')}}" alt="" width="60">
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
 
 
@@ -511,30 +515,29 @@
 
 
 
-                            </ul>
-                            <div class="d-flex">
-                                @if (Route::has('login'))
-                                <div class="top-0 right-0 px-6 py-4 sm:block">
-                                    @auth
-                                    <a href="{{ url('/dashboard') }}"
-                                        class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                                    @else
-                                    <a href="{{ route('login') }}"
-                                        class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+        </ul>
+        <div class="d-flex">
+            @if (Route::has('login'))
+            <div class="top-0 right-0 px-6 py-4 sm:block">
+                @auth
+                <a href="{{ url('/dashboard') }}"
+                    class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                @else
+                <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
-                                    @if (Route::has('register'))
-                                    <a href="{{ route('register') }}"
-                                        class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                                    @endif
-                                    @endauth
-                                </div>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                </nav>
+                @if (Route::has('register'))
+                <a href="{{ route('register') }}"
+                    class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                @endif
+                @endauth
             </div>
+            @endif
         </div>
+    </div>
+    </div>
+    </nav>
+    </div>
+    </div>
     </div> --}}
 
     <div class="items-top justify-center min-h-screen bg-gray-100 ">
@@ -547,14 +550,14 @@
                         <img src="{{asset('logo/'.'CGHS.png')}}" alt="" width="">
                         {{-- <p>Chakaria Government High School <br> Programs & Events - 2024</p>
                         <span> Chakaria Government High School <br> Programs & Events - 2024</span>                         --}}
-                    </div> 
+                    </div>
                     <div class="site_logo_Inner text-left">
-                      
+
                         <h3>Chakaria Government High School</h3>
                         <h4>Programs & Events - 2024</h4>
                     </div>
-    
-                </div>   
+
+                </div>
             </div>
             <h5 class="text-center reg_h1" style="">Registration Form</h5>
 
@@ -832,7 +835,7 @@
 
                     <div class="row justify-content-end text-center">
                         <div class="col-sm-10">
-                            <button type="submit" class="btn btn-primary">Add Product </button>
+                            <button type="submit" class="btn btn-primary">Submit Registration </button>
                         </div>
                     </div>
                 </form>
