@@ -49,6 +49,8 @@ class CghsController extends Controller
             
          
         // ]);
+        $number=mt_rand(1000000000,9999999999);
+        $updateNum=0+ $number;
    
         $total=($request->guest*500)+1200;
        
@@ -72,6 +74,7 @@ class CghsController extends Controller
         $data->img=$newImageName;
         $data->bkash=$request->payment;
         $data->transaction_id=$request->transaction_id;
+        $data->reg_num= $updateNum;
         $data->save();
       
         return redirect()->route('cghs');
