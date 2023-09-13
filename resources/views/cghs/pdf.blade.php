@@ -131,7 +131,7 @@
               </div>
               <div class="reg_ings_section">
                   <div class="bar_cd">
-                    {!!  DNS1D::getBarcodeHTML(1231321, 'PHARMA')!!}
+                    {!! DNS1D::getBarcodeHTML("$row->id", 'UPCA')!!}
                     <p>50213644789</p>
                   </div>
                   <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('images/'.$row->img)))}}"" width='100%' height='200px' alt='image'
