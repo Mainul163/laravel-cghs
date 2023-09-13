@@ -83,16 +83,15 @@
 
 
     <div class="pdf_main_wrap">
-        <div class="top_header">           
-
-                <div class="top_header">
-                    <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'CGHS.png')))}}" alt="" width="80">
-                    <p>CHAKARIA GOVT HIGH SCHOOL<br>
-                      EIIN No: 106169, Established: 1930, Address: Chakaria-4741, Coxs Bazar, Chattogram.
-                      <br>
-                      CGHS Alumni Association - 2024</p>
-                    
-                </div>         
+        <div class="top_header">
+            <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'CGHS.png')))}}" alt="" width="120">
+            <div class="top_tx_head">
+                <h3 class="top_title">CHAKARIA GOVT HIGH SCHOOL</h3>
+                  EIIN No: 106169, Established: 1930, <br> Address: Chakaria-4741, Coxs Bazar, Chattogram.
+                  <br>
+                  <h3 class="hed_last">CGHS Alumni Association - 2024</h3>
+              </div>
+            
         </div>
         <div class="pdf_Reg_info">
             <h3>Registration Letter</h3>
@@ -183,167 +182,184 @@
               </table>
         </div>
         <div class="reg_footer">
-            ** When You Came Pleace carrey your Invitation card **
-        </div>
-        <div class="footer_contact">
-            <div class="contact_number">
-                Contact Number : 017170870798
-            </div>
-            <div class="email_info">
-                Email : demo@gmail.com
-            </div>
-        </div>
+            <P>**Batch Representation will handover Invitation letter to you**<br>
+              **When You Came Pleace carrey your Invitation card** </P>
+          </div>
+
         
     </div>
 
+
+
+
+
+
     <style>
         
-      
-        .top_header p {
-            position: absolute;
-            left: 100px;
-            display: inline-block;
-            width: 80%;
-            top: 4px;
-            font-weight: bold;
-            font-size: 14px;
-        }
-        .pdf_main_wrap{
-        margin: 0 auto;
-        width: 600px;
-        border: 1px solid #ddd;
-        padding: 40px 30px;
-        }
-        .top_header {
-        display: block;
-        clear: both;
-        width: 100%;
-        position: relative;
-        height: 120px;
-            
-        }
-        .top_header h3 {
-            display: inline-block;
-            position: absolute;
-            left: 50%;
-            top: 30px;
-            transform: translate(-50%,0);
-            
-        }
-        .pdf_Reg_info h3 {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            transform: translate(-50%,0);
-            height: 200px;
-            
-        }
-        .top_header img {
+
+        .top_title {
+  color: #1c3795;
+}
+
+      .hed_last{
+        margin-top: 10px;
+font-weight: bold;
+color: #7f0000;
+      }
+      .top_header .top_tx_head h5 {
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .top_header .top_tx_head {
+        position: absolute;
         display: inline-block;
-            position: absolute;
-            top: 10px
-            
-        }
-
-        .reg_tbl_info {
-        width: 350px;
-        position: absolute;
-        left: 0;
-        padding-right: 20px;
-        top: 50px;
-        }
-        .reg_ings_section {
-        width: 190px;
-        position: absolute;
-        right: 0;
-        text-align: center;
-        top: 50px;
-        }
-        .pdf_Reg_info {
-        position: relative;
-        height: 330px;
-        }
-        .reg_tbl_info {
-        }
-        .reg_table {
-        width: 100%;
-        border: 1px solid #dee2e6;
-        }
-        .reg_table tr th {
-        font-weight: bold;
-        }
-        .reg_table tr th, .reg_table tr td {
-        border: 1px solid #dee2e6;
-        padding: 5px 20px;
-        text-align: left;
+        width: 80%;
+        top: 4px;
         font-size: 14px;
-        }
-        .reg_table tr th {
-        }
-        .reg_ings_section img.border.rounded.ml {
-        width: 200px;
-        height: 190px;
-        object-fit: cover;
-        }
-
-        .table_btm tr th, .table_btm tr td{
-            border: 1px solid #dee2e6;
-        padding: 4px 20px;
-        text-align: left;
-        font-size: 14px;
-        }
-        .table_btm {
-        width: 100%;
-        border: 1px solid #dee2e6;
-        }
-        .table_btm tr th {
-        font-weight: bold;
-        }
-        .reg_footer {
-        display: block;
         text-align: center;
-        border: 1px solid #ddd;
-        margin: 10px 0;
-        padding: 10px 10px;
-        }
-        
-        .footer_contact {
-        display: block;
-        position: relative;
-        height: 30px;
-        }
-        .contact_number {
-        position: absolute;
-        left: 0;
-        }
-        .email_info {
-        position: absolute;
-        right: 0;
-        }
-        .bar_cd {
-        text-align: center !important;
-        margin: 0 auto;
-        position: absolute;
-        right: 18px;
+        left: 50%;
+        transform: translate(-50%,0);
       }
-      .reg_ings_section img {
-        width: 130px;
-        object-fit: cover;
-        height: 165px;
-        margin-top: 70px;
+      .pdf_main_wrap{
+      margin: 0 auto;
+      width: 600px;
+      border: 1px solid #ddd;
+      padding: 40px 30px;
       }
+      .top_header {
+      display: block;
+      clear: both;
+      width: 100%;
+      position: relative;
+      height: 170px;
           
+      }
+      .top_header h3 {
+          font-weight: bold;
+          
+      }
+      .pdf_Reg_info h3 {
+          position: absolute;
+          left: 50%;
+          top: 0;
+          transform: translate(-50%,0);
+          height: 200px;
+          color: #1c3795;
+          
+      }
+      .top_header img {
+      display: inline-block;
+          position: absolute;
+          top: 30px
+          
+      }
+      .top_header .top_tx_head h3 {
+      font-size: 23px;
+      }
+
+      .reg_tbl_info {
+      width: 350px;
+      position: absolute;
+      left: 0;
+      padding-right: 20px;
+      top: 50px;
+      }
+      .reg_ings_section {
+      width: 190px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 50px;
+      }
+      .pdf_Reg_info {
+      position: relative;
+      height: 330px;
+      }
+      .reg_tbl_info {
+      }
+      .reg_table {
+      width: 100%;
+      border: 1px solid #dee2e6;
+      }
+      .reg_table tr th {
+      font-weight: bold;
+      }
+      .reg_table tr th, .reg_table tr td {
+      border: 1px solid #dee2e6;
+      padding: 5px 20px;
+      text-align: left;
+      font-size: 14px;
+      }
+      .reg_table tr th {
+      }
+      .reg_ings_section img.border.rounded.ml {
+      width: 200px;
+      height: 190px;
+      object-fit: cover;
+      }
+
+      .table_btm tr th, .table_btm tr td{
+          border: 1px solid #dee2e6;
+      padding: 4px 20px;
+      text-align: left;
+      font-size: 14px;
+      }
+      .table_btm {
+      width: 100%;
+      border: 1px solid #dee2e6;
+      }
+      .table_btm tr th {
+      font-weight: bold;
+      }
+      .reg_footer {
+      display: block;
+      text-align: center;
+      border: 1px solid #ddd;
+      margin: 10px 0;
+      padding: 10px 10px;
+      color: #ea1f26;
+      }
+      
+      .footer_contact {
+      display: block;
+      position: relative;
+      height: 30px;
+      }
+      .contact_number {
+      position: absolute;
+      left: 0;
+      }
+      .email_info {
+      position: absolute;
+      right: 0;
+      }
+      .bar_cd {
+      text-align: center !important;
+      margin: 0 auto;
+      position: absolute;
+      right: 18px;
+    }
+    .reg_ings_section img {
+      width: 130px;
+      object-fit: cover;
+      height: 165px;
+      margin-top: 70px;
+    }
+      
+  
 
 
-        
 
-        
-    
-
+      
+  </style>
 
 
-        
-    </style>
+
+
+
+
+
+
 
 
 
