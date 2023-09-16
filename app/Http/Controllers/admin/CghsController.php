@@ -11,7 +11,7 @@ class CghsController extends Controller
     //
 
     public function index(){
-        // $graduatedData=graduated::latest('id')->limit(1)->get();;
+            // $graduatedData=graduated::latest('id')->limit(1)->get();;
         // return view('cghs.index',compact('graduatedData'));
         $graduatedData=graduated::latest('id')->limit(1)->get();
 
@@ -26,6 +26,7 @@ class CghsController extends Controller
        
         // $pdf = PDF::loadView('communityDetails.pdf', compact('commun_details','communityDetailsTitle'))->setOptions(['defaultFont' => 'sans-serif']);
         return $pdf->download('cghs.pdf');
+        
     }
 
 
@@ -51,25 +52,19 @@ class CghsController extends Controller
          
         // ]);
 
-        //   $request->validate([
-        //     'graduated_name' => 'required',
-        //     'batch' => 'required',
-        //     'mobile_number' => 'required',
-        //     'blood_group' => 'required',
-        //     't-shirt' => 'required',
-        //     'profession' => 'required',
-        //     'transaction_id' => 'required',
-        //     'payment' => 'required',
+          $request->validate([
+            'graduated_name' => 'required',
+        
             
          
-        // ]);
+        ]);
       
    
         $total=($request->guest*500)+1200;
-       
         $newImageName =time().'-'.$request->name.'.'.$request->img->extension();
+      
         $request->img->move(public_path('images'),$newImageName);
-
+      
         // $newImageName=$request->file('img')->getClientOriginalName();
         // $request->file('img')->storeAs('public/images',$newImageName);
         $data=new graduated;
@@ -87,6 +82,7 @@ class CghsController extends Controller
         $data->img=$newImageName;
         $data->bkash=$request->payment;
         $data->transaction_id=$request->transaction_id;
+        $data->address=$request->address;
        
         $data->save();
       

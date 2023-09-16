@@ -25,6 +25,10 @@
         top: 10px;
     }
 
+    td {
+        text-transform: capitalize;
+    }
+
     @media only screen and (min-width: 768px) {
         .mobil_redesing {
             display: none;
@@ -116,12 +120,25 @@
                             <td>{{$row->id+1110000}}</td>
                         </tr>
                         <tr>
+                            <th>Regestration Time</th>
+                            <td>{{$row->date}}</td>
+                        </tr>
+                        <tr>
                             <th>Graduated Name</th>
                             <td>{{$row->graduated_name}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Batch</th>
+                            <td>{{$row->batch}}</td>
                         </tr>
                         <tr>
                             <th>Mobile Number</th>
                             <td>{{$row->mobile_number}}</td>
+                        </tr>
+                        <tr>
+                            <th>Address</th>
+                            <td>{{$row->address}}</td>
                         </tr>
                         <tr>
                             <th>Guest Number</th>
@@ -133,10 +150,12 @@
             <div class="reg_ings_section">
                 <div class="bar_cd">
                     {!! DNS1D::getBarcodeHTML("$row->id"+1110000, 'C128')!!}
-                    <p>50213644789</p>
-                </div>
+                    <p>Regestration Barcode</p>
+                </div><br>
                 <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('images/'.$row->img)))}}"" width='100%' height='200px' alt='image'
                   class=" border rounded" />
+
+                <p>Picture</p>
             </div>
 
         </div>

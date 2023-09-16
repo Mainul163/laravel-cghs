@@ -565,7 +565,7 @@
 
             <div class="card-body reg_form_system">
                 <form action="{{route('graduatedInfo')}}" method="POST" enctype="multipart/form-data">
-                    @csrf
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Graduated Name <sapn
                                 class="text-danger">*</sapn></label>
@@ -584,9 +584,10 @@
                                 *</sapn></label>
                         <div class="col-sm-10">
 
-                            <select class="form-select" id="batch" name="batch" placeholder="Select your batch"
+                            <select class="form-select" id="batch" name="batch" placeholder="Select Your Batch"
                                 class="@error('batch') is-invalid @enderror" value="{{old('batch')}}">
-                                <option selected disabled> select your batch</option>
+                                <option selected disabled> Select Your Batch</option>
+                                <option value="no batch">No batch</option>
                                 <option value="1980">1980</option>
                                 <option value="1981">1981</option>
                                 <option value="1982">1982</option>
@@ -653,13 +654,25 @@
                     </div>
 
                     <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Address <sapn
+                                class="text-danger">*</sapn></label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Address"
+                                class="@error('address') is-invalid @enderror" value="{{old('address')}}" />
+                            @error('address')
+                            <strong class=" text-danger">{{ $message }}</strong>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Blood Group <sapn
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
 
                             <select class="form-select" id="blood_group" name="blood_group" placeholder="Blood Group"
                                 class="@error('blood_group') is-invalid @enderror" value="{{old('blood_group')}}">
-                                <option selected disabled>select your blood group</option>
+                                <option selected disabled>Select Your Blood Group</option>
                                 <option value="O(+)">O(+)</option>
                                 <option value="O(-)">O(-)</option>
                                 <option value="A(+)">A(+)</option>
@@ -682,7 +695,7 @@
 
                             <select class="form-select" id="t-shirt" name="t_shirt" placeholder="T-Shirt Size"
                                 class="@error('t_shirt') is-invalid @enderror" value="{{old('t_shirt')}}">
-                                <option selected disabled>select your t-shirt size</option>
+                                <option selected disabled>Select Your T-shirt Size</option>
                                 <option value="M= Chest: 38”, Length: 26.5”">M= Chest: 38”, Length: 26.5”</option>
                                 <option value="L= Chest: 40”, Length: 27.5”">L= Chest: 40”, Length: 27.5”</option>
                                 <option value="XL= Chest: 42”, Length: 28.5”">XL= Chest: 42”, Length: 28.5”</option>
@@ -704,7 +717,7 @@
 
                             <select class="form-select" id="profession" name="profession" placeholder="Profession"
                                 class="@error('profession') is-invalid @enderror" value="{{old('profession')}}">
-                                <option selected disabled>select your profession</option>
+                                <option selected disabled>Select Your Profession</option>
                                 <option value="businessman">Businessman</option>
                                 <option value="doctor">Doctor</option>
                                 <option value="engineer">Engineer</option>
@@ -726,7 +739,7 @@
                             institute</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="profession_institute"
-                                name="profession_institute" placeholder="profession institute name" />
+                                name="profession_institute" placeholder="Profession Institute Name" />
                         </div>
                     </div>
 
@@ -734,7 +747,7 @@
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Name of designation</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="designation" name="designation"
-                                placeholder="designation" />
+                                placeholder="Designation" />
                         </div>
                     </div>
                     <div class="row mb-3" class="btn-group">
@@ -746,6 +759,9 @@
                             </div>
 
                             <div class="btn-group" data-toggle="buttons">
+                                <label id='RADIO' class="btn btn-primary">
+                                    <input type="radio" name="guest" value="0">None
+                                </label>
                                 <label id='RADIO' class="btn btn-primary">
                                     <input type="radio" name="guest" value="1">1
                                 </label>
@@ -804,7 +820,7 @@
                     </div>
 
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-default-name"> Payment number <sapn
+                        <label class="col-sm-2 col-form-label" for="basic-default-name"> Payment Number <sapn
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="bkash" name="payment"
@@ -820,11 +836,11 @@
 
 
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-default-name"> transaction id <sapn
+                        <label class="col-sm-2 col-form-label" for="basic-default-name"> Transaction id <sapn
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="transaction_id" name="transaction_id"
-                                placeholder=" transaction id" class="@error('transaction_id') is-invalid @enderror"
+                                placeholder=" Transaction Id" class="@error('transaction_id') is-invalid @enderror"
                                 value="{{old('transaction_id')}}" />
                             @error('transaction_id')
                             <strong class=" text-danger">{{ $message }}</strong>
