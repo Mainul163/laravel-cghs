@@ -258,7 +258,7 @@
                     
                     <div class="container ">
                         <div class="row">            
-                            <div class="dd_btn"><a href="{{route('pdf')}}" class="btn btn-primary dy_btsn">Download PDF</a></div>                
+                            <div class="col-md-12 text-right"><a href="{{route('pdf')}}" class="btn btn-primary dy_btsn">Download PDF</a></div>                
                             <div class="col-md-12  pt-5 pb-1 px-5">
                                 {{-- <div class="top_logo text-center">
                                     <img src="{{asset('logo/'.'CGHS.png')}}" alt="" width="80">
@@ -281,7 +281,7 @@
                         </div>
                         <h3 class="text-center pb-4">Registration Letter</h3>
                         <div class="row">
-                            <div class="col-md-8 text-left top_info_short">
+                            <div class="col-lg-8 col-md-12 text-left top_info_short">
                                 <table class="table table-bordered tableborderless">
                                     <tbody>
                                         <tr>
@@ -329,7 +329,7 @@
                                 </table>
 
                             </div>
-                            <div class="col-md-4 text-right">
+                            <div class="col-lg-4 col-md-12 text-right">
                                 <div class="reg_ings_sect">
                                     <div class="bar_cds">
                                         {!! DNS1D::getBarcodeHTML("$row->id"+1110000, 'C128')!!}
@@ -725,6 +725,44 @@
   height: 330px;
   object-fit: cover;
 }
+
+@media only screen and (min-width: 991px) {
+    .top_header {
+    display: block;
+    clear: both;
+    width: 100%;
+    position: unset;
+    height: auto;
+    text-align: center;
+  }
+  .top_header img {
+  display: inline-block;
+  position: unset;
+  top: 0px;
+}
+.top_header .top_tx_head {
+  position: unset;
+  display: inline-block;
+  width: 100%;
+  top: 4px;
+  font-size: 14px;
+  text-align: center;
+  left: 50%;
+  transform: none;
+}
+
+    }
+
+
+
+
+
+
+
+
+
+
+
         </style>
 
 
