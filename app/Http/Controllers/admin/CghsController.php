@@ -11,21 +11,21 @@ class CghsController extends Controller
     //
 
     public function index(){
-            // $graduatedData=graduated::latest('id')->limit(1)->get();;
-        // return view('cghs.index',compact('graduatedData'));
-        $graduatedData=graduated::latest('id')->limit(1)->get();
+            $graduatedData=graduated::latest('id')->limit(1)->get();;
+        return view('cghs.index',compact('graduatedData'));
+        // $graduatedData=graduated::latest('id')->limit(1)->get();
 
-        $pdf = \PDF::loadView('cghs.pdf',[
+        // $pdf = \PDF::loadView('cghs.pdf',[
           
-            'graduatedData'=>$graduatedData,
+        //     'graduatedData'=>$graduatedData,
           
           
-        ]) ->setOptions(['enable_php' => true])
-        ->setPaper('A4', 'portrait');
+        // ]) ->setOptions(['enable_php' => true])
+        // ->setPaper('A4', 'portrait');
 
        
-        // $pdf = PDF::loadView('communityDetails.pdf', compact('commun_details','communityDetailsTitle'))->setOptions(['defaultFont' => 'sans-serif']);
-        return $pdf->download('cghs.pdf');
+       
+        // return $pdf->download('cghs.pdf');
         
     }
 
