@@ -244,8 +244,8 @@
     .pdf_main_wrap {
         margin: 0 auto;
         width: 600px;
-        border: 1px solid #ddd;
-        padding: 40px 30px;
+        /* border: 1px solid #ddd;
+        padding: 40px 30px; */
     }
 
     .top_header {
@@ -275,11 +275,11 @@
     .top_header img {
         display: inline-block;
         position: absolute;
-        top: 30px
+        top: 20px
     }
 
     .top_header .top_tx_head h3 {
-        font-size: 23px;
+        font-size: 20px;
     }
 
     .reg_tbl_info {
@@ -300,7 +300,7 @@
 
     .pdf_Reg_info {
         position: relative;
-        height: 330px;
+        height: 390px;
     }
 
     .reg_tbl_info {}
@@ -382,7 +382,7 @@
     .reg_ings_section img {
         width: 130px;
         object-fit: cover;
-        height: 165px;
+        height: 200px;
         margin-top: 70px;
     }
     </style>
