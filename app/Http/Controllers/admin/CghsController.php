@@ -62,7 +62,7 @@ class CghsController extends Controller
    
         $total=($request->guest*500)+1200;
         $newImageName =time().'-'.$request->name.'.'.$request->img->extension();
-      
+          $status='pending';
         $request->img->move(public_path('images'),$newImageName);
       
         // $newImageName=$request->file('img')->getClientOriginalName();
@@ -83,6 +83,7 @@ class CghsController extends Controller
         $data->bkash=$request->payment;
         $data->transaction_id=$request->transaction_id;
         $data->address=$request->address;
+        $data->status=$status;
        
         $data->save();
       
