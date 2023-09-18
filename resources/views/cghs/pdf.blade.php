@@ -380,11 +380,15 @@
     }
 
     .reg_ings_section img {
-        width: 130px;
+        width: 190px;
         object-fit: cover;
         height: 200px;
-        margin-top: 70px;
+        margin-top: 40px;
     }
+    .bar_cd p {
+  padding: 0 !important;
+  margin: 0 !important;
+}
     </style>
 
 

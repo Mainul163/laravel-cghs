@@ -418,7 +418,7 @@
 
 
 
-    <div class="pdf_main_wrap d-none">
+    <div class="pdf_main_wrap d-non">
         <div class="top_header">
             <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'CGHS.png')))}}"
                 alt="" width="120">
@@ -715,18 +715,22 @@
         }
     
         .reg_ings_section img {
-            width: 130px;
+            width: 190px;
             object-fit: cover;
             height: 200px;
-            margin-top: 70px;
+            margin-top: 40px;
         }
+        .bar_cd p {
+  padding: 0 !important;
+  margin: 0 !important;
+}
         .reg_ings_sect img {
   width: 100%;
   height: 330px;
   object-fit: cover;
 }
 
-@media only screen and (min-width: 991px) {
+@media only screen and (max-width: 991px) {
     .top_header {
     display: block;
     clear: both;
@@ -734,23 +738,40 @@
     position: unset;
     height: auto;
     text-align: center;
-  }
-  .top_header img {
-  display: inline-block;
-  position: unset;
-  top: 0px;
+    }
+    .top_header img {
+    display: inline-block;
+    position: unset !important; 
+    top: 0px;
+    padding-bottom: 20px;
+    }
+    .top_header .top_tx_head {
+    position: unset;
+    display: inline-block;
+    width: 100%;
+    top: 4px;
+    font-size: 14px;
+    text-align: center;
+    left: 50%;
+    transform: none;
+    }
+    
+.bar_cds {
+  text-align: center !important;
+  margin: 0 auto;
 }
-.top_header .top_tx_head {
-  position: unset;
-  display: inline-block;
-  width: 100%;
-  top: 4px;
-  font-size: 14px;
-  text-align: center;
-  left: 50%;
-  transform: none;
+.reg_ings_sect .bar_cds {
+  text-align: left !important;
+  padding: 30px 0 0 0;
 }
-
+.reg_ings_sect img {
+  width: 200px;
+  height: 230px;
+  object-fit: cover;
+}
+.reg_ings_sect {
+  text-align: left !important;
+}
     }
 
 
