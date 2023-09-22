@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\graduated;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Haruncpi\LaravelIdGenerator\IdGenerator;
+use App\Helpers\Helper;
 class CghsController extends Controller
 {
     //
@@ -58,16 +60,19 @@ class CghsController extends Controller
             
          
         ]);
+        $string =  Helper::IDGenerator(new graduated, 'reg_id', 2, '1100');
+        
+
       
-   
+        $data=new graduated;
+     
         $total=($request->guest*500)+1200;
         $newImageName =time().'-'.$request->name.'.'.$request->img->extension();
           $status='pending';
         $request->img->move(public_path('images'),$newImageName);
       
-        // $newImageName=$request->file('img')->getClientOriginalName();
-        // $request->file('img')->storeAs('public/images',$newImageName);
-        $data=new graduated;
+      
+     
        
         $data->graduated_name=$request->graduated_name;
         $data->batch=$request->batch;
@@ -84,7 +89,7 @@ class CghsController extends Controller
         $data->transaction_id=$request->transaction_id;
         $data->address=$request->address;
         $data->status=$status;
-       
+         $data->reg_id=$string;
         $data->save();
       
         return redirect()->route('cghs');
