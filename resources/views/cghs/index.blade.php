@@ -420,7 +420,7 @@
 
 
 
-    <div class="pdf_main_wrap d-nonse">
+    <div class="pdf_main_wrap d-none">
 
         <img class="imgtop001" src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'top_lft.png')))}}"
         alt="">
