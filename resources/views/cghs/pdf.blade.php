@@ -87,6 +87,11 @@
 
 
     <div class="pdf_main_wrap">
+
+        <img class="imgtop001" src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'top_lft.png')))}}"
+        alt="">
+        <img class="imgmid001" src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'bg_img.png')))}}"
+        alt="">
         <div class="top_header">
             <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'CGHS.png')))}}"
                 alt="" width="120">
@@ -205,6 +210,8 @@
             <P>**Batch Representation will handover Invitation letter to you**<br>
                 **When You Came Pleace carrey your Invitation card** </P>
         </div>
+        {{-- <img class="imgbtn001" src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'btn_img.png')))}}"
+        alt=""> --}}
 
 
     </div>
@@ -246,6 +253,8 @@
         width: 600px;
         /* border: 1px solid #ddd;
         padding: 40px 30px; */
+        position: relative;
+        
     }
 
     .top_header {
@@ -388,6 +397,24 @@
     .bar_cd p {
   padding: 0 !important;
   margin: 0 !important;
+}
+.imgbtn001 {
+  width: 100%;
+}
+.imgtop001 {
+  position: absolute;
+  width: 90px;
+  right: 0px;
+  top: 7px;
+}
+.imgmid001 {
+  position: absolute;
+  width: 470px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  z-index: -1;
+  opacity: 0.6;
 }
     </style>
 
