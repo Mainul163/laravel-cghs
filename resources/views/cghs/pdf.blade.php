@@ -99,7 +99,7 @@
                 <h3 class="top_title">CHAKARIA GOVT HIGH SCHOOL</h3>
                 EIIN No: 106169, Established: 1930, <br> Address: Chakaria-4741, Coxs Bazar, Chattogram.
                 <br>
-                <h3 class="hed_last">CGHS Alumni Association - 2024</h3>
+                <h3 class="hed_last">CGHS Alumni Association</h3>
             </div>
 
         </div>
@@ -110,15 +110,15 @@
                     <tbody>
                         <tr>
                             <th>Program Date</th>
-                            <td>1st July 2023</td>
+                            <td>10th April, 2023 (9am - 6pm)</td>
                         </tr>
-                        <tr>
+                        {{-- <tr>
                             <th>Program Time</th>
-                            <td>9am - 6pm</td>
-                        </tr>
+                            <td></td>
+                        </tr> --}}
                         <tr>
                             <th>Program Vanue</th>
-                            <td>Dhaka, Banani</td>
+                            <td>CHAKARIA GOVT HIGH SCHOOL</td>
                         </tr>
                         <tr>
                             <th>Regestration Id</th>
@@ -129,7 +129,7 @@
                             <td>{{$row->date}}</td>
                         </tr>
                         <tr>
-                            <th>Graduated Name</th>
+                            <th>Participate Name</th>
                             <td>{{$row->graduated_name}}</td>
                         </tr>
 
@@ -160,7 +160,7 @@
                 <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('images/'.$row->img)))}}"" width='100%' height='200px' alt='image'
                   class=" border rounded" />
 
-                <p>Picture</p>
+                <p>Participate Picture</p>
             </div>
 
         </div>
@@ -292,7 +292,7 @@
     }
 
     .reg_tbl_info {
-        width: 350px;
+        width: 380px;
         position: absolute;
         left: 0;
         padding-right: 20px;
@@ -306,10 +306,13 @@
         text-align: center;
         top: 50px;
     }
-
+    .reg_footer p {
+  margin: 0;
+  padding: 0;
+}
     .pdf_Reg_info {
         position: relative;
-        height: 380px;
+        height: 360px;
     }
 
     .reg_tbl_info {}
@@ -326,7 +329,7 @@
     .reg_table tr th,
     .reg_table tr td {
         border: 1px solid #dee2e6;
-        padding: 5px 20px;
+        padding: 5px 10px;
         text-align: left;
         font-size: 13px;
     }
@@ -415,7 +418,7 @@
   transform: translate(-50%,-50%);
   top: 50%;
   z-index: -1;
-  opacity: 0.6;
+  opacity: 0.5;
 }
     </style>
 

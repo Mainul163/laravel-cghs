@@ -275,7 +275,7 @@
                                     EIIN No: 106169, Established: 1930, <br> Address: Chakaria-4741, Coxs Bazar,
                                     Chattogram.
                                     <br>
-                                    <h3 class="hed_last">CGHS Alumni Association - 2024</h3>
+                                    <h3 class="hed_last">CGHS Alumni Association</h3>
                                 </div>
 
                             </div>
@@ -288,15 +288,15 @@
                                 <tbody>
                                     <tr>
                                         <th>Program Date</th>
-                                        <td>1st July 2023</td>
+                                        <td>10th April, 2023 (9am - 6pm)</td>
                                     </tr>
-                                    <tr>
+                                    {{-- <tr>
                                         <th>Program Time</th>
-                                        <td>9am - 6pm</td>
-                                    </tr>
+                                        <td></td>
+                                    </tr> --}}
                                     <tr>
                                         <th>Program Vanue</th>
-                                        <td>Dhaka, Banani</td>
+                                        <td>CHAKARIA GOVT HIGH SCHOOL</td>
                                     </tr>
                                     <tr>
                                         <th>Regestration Id</th>
@@ -307,10 +307,10 @@
                                         <td>{{$row->date}}</td>
                                     </tr>
                                     <tr>
-                                        <th>Graduated Name</th>
+                                        <th>Participate Name</th>
                                         <td>{{$row->graduated_name}}</td>
                                     </tr>
-
+            
                                     <tr>
                                         <th>Batch</th>
                                         <td>{{$row->batch}}</td>
@@ -420,7 +420,7 @@
 
 
 
-    <div class="pdf_main_wrap d-none">
+    <div class="pdf_main_wrap d-nonse">
 
         <img class="imgtop001" src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'top_lft.png')))}}"
         alt="">
@@ -434,7 +434,7 @@
                 <h3 class="top_title">CHAKARIA GOVT HIGH SCHOOL</h3>
                 EIIN No: 106169, Established: 1930, <br> Address: Chakaria-4741, Coxs Bazar, Chattogram.
                 <br>
-                <h3 class="hed_last">CGHS Alumni Association - 2024</h3>
+                <h3 class="hed_last">CGHS Alumni Association</h3>
             </div>
 
         </div>
@@ -445,15 +445,15 @@
                     <tbody>
                         <tr>
                             <th>Program Date</th>
-                            <td>1st July 2023</td>
+                            <td>10th April, 2023 (9am - 6pm)</td>
                         </tr>
-                        <tr>
+                        {{-- <tr>
                             <th>Program Time</th>
-                            <td>9am - 6pm</td>
-                        </tr>
+                            <td></td>
+                        </tr> --}}
                         <tr>
                             <th>Program Vanue</th>
-                            <td>Dhaka, Banani</td>
+                            <td>CHAKARIA GOVT HIGH SCHOOL</td>
                         </tr>
                         <tr>
                             <th>Regestration Id</th>
@@ -464,7 +464,7 @@
                             <td>{{$row->date}}</td>
                         </tr>
                         <tr>
-                            <th>Graduated Name</th>
+                            <th>Participate Name</th>
                             <td>{{$row->graduated_name}}</td>
                         </tr>
 
@@ -632,7 +632,7 @@
     }
 
     .reg_tbl_info {
-        width: 350px;
+        width: 400px;
         position: absolute;
         left: 0;
         padding-right: 20px;
@@ -646,10 +646,13 @@
         text-align: center;
         top: 50px;
     }
-
+    .reg_footer p {
+  margin: 0;
+  padding: 0;
+}
     .pdf_Reg_info {
         position: relative;
-        height: 390px;
+        height: 360px;
     }
 
     .reg_tbl_info {}
@@ -666,7 +669,7 @@
     .reg_table tr th,
     .reg_table tr td {
         border: 1px solid #dee2e6;
-        padding: 5px 20px;
+        padding: 5px 10px;
         text-align: left;
         font-size: 14px;
     }
@@ -701,7 +704,7 @@
         text-align: center;
         border: 1px solid #ddd;
         margin: 10px 0;
-        padding: 10px 10px;
+        padding: 5px 10px;
         color: #ea1f26;
     }
 
