@@ -730,7 +730,7 @@
         object-fit: cover;
     }
 
-    @media only screen and (min-width: 991px) {
+    @media only screen and (max-width: 991px) {
         .top_header {
             display: block;
             clear: both;
