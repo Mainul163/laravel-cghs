@@ -88,10 +88,12 @@
 
     <div class="pdf_main_wrap">
 
-        <img class="imgtop001" src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'top_lft.png')))}}"
-        alt="">
-        <img class="imgmid001" src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'bg_img.png')))}}"
-        alt="">
+        <img class="imgtop001"
+            src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'top_lft.png')))}}"
+            alt="">
+        <img class="imgmid001"
+            src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'bg_img.png')))}}"
+            alt="">
         <div class="top_header">
             <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'CGHS.png')))}}"
                 alt="" width="120">
@@ -122,7 +124,7 @@
                         </tr>
                         <tr>
                             <th>Regestration Id</th>
-                            <td>{{$row->id+1110000}}</td>
+                            <td>{{$row->reg_id}}</td>
                         </tr>
                         <tr>
                             <th>Regestration Time</th>
@@ -154,7 +156,7 @@
             </div>
             <div class="reg_ings_section">
                 <div class="bar_cd">
-                    {!! DNS1D::getBarcodeHTML("$row->id"+1110000, 'C128')!!}
+                    {!! DNS1D::getBarcodeHTML("$row->reg_id", 'C128')!!}
                     <p>Regestration Barcode</p>
                 </div><br>
                 <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('images/'.$row->img)))}}"" width='100%' height='200px' alt='image'
@@ -210,8 +212,9 @@
             <P>**Batch Representation will handover Invitation letter to you**<br>
                 **When You Came Pleace carrey your Invitation card** </P>
         </div>
-        <img class="imgbtn001" src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'btn_img.png')))}}"
-        alt="">
+        <img class="imgbtn001"
+            src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'btn_img.png')))}}"
+            alt="">
 
 
     </div>
@@ -254,7 +257,7 @@
         /* border: 1px solid #ddd;
         padding: 40px 30px; */
         position: relative;
-        
+
     }
 
     .top_header {
@@ -306,10 +309,12 @@
         text-align: center;
         top: 50px;
     }
+
     .reg_footer p {
-  margin: 0;
-  padding: 0;
-}
+        margin: 0;
+        padding: 0;
+    }
+
     .pdf_Reg_info {
         position: relative;
         height: 360px;
@@ -398,28 +403,32 @@
         height: 200px;
         margin-top: 40px;
     }
+
     .bar_cd p {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-.imgbtn001 {
-  width: 100%;
-}
-.imgtop001 {
-  position: absolute;
-  width: 90px;
-  right: 0px;
-  top: 25px;
-}
-.imgmid001 {
-  position: absolute;
-  width: 470px;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  top: 50%;
-  z-index: -1;
-  opacity: 0.5;
-}
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .imgbtn001 {
+        width: 100%;
+    }
+
+    .imgtop001 {
+        position: absolute;
+        width: 90px;
+        right: 0px;
+        top: 25px;
+    }
+
+    .imgmid001 {
+        position: absolute;
+        width: 470px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        z-index: -1;
+        opacity: 0.5;
+    }
     </style>
 
 

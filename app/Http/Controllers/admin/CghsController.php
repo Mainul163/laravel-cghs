@@ -54,19 +54,13 @@ class CghsController extends Controller
          
         // ]);
 
-          $request->validate([
-            'graduated_name' => 'required',
-        
-            
-         
-        ]);
         $string =  Helper::IDGenerator(new graduated, 'reg_id', 2, '1100');
         
 
       
         $data=new graduated;
      
-        $total=($request->guest*500)+1200;
+        $total=($request->guest*700)+1020;
         $newImageName =time().'-'.$request->name.'.'.$request->img->extension();
           $status='pending';
         $request->img->move(public_path('images'),$newImageName);
