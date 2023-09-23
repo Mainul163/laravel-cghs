@@ -210,8 +210,8 @@
             <P>**Batch Representation will handover Invitation letter to you**<br>
                 **When You Came Pleace carrey your Invitation card** </P>
         </div>
-        {{-- <img class="imgbtn001" src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'btn_img.png')))}}"
-        alt=""> --}}
+        <img class="imgbtn001" src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'btn_img.png')))}}"
+        alt="">
 
 
     </div>
@@ -262,7 +262,7 @@
         clear: both;
         width: 100%;
         position: relative;
-        height: 170px;
+        height: 150px;
 
     }
 
@@ -309,7 +309,7 @@
 
     .pdf_Reg_info {
         position: relative;
-        height: 390px;
+        height: 380px;
     }
 
     .reg_tbl_info {}
@@ -328,7 +328,7 @@
         border: 1px solid #dee2e6;
         padding: 5px 20px;
         text-align: left;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .reg_table tr th {}
@@ -344,7 +344,7 @@
         border: 1px solid #dee2e6;
         padding: 4px 20px;
         text-align: left;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .table_btm {
@@ -360,9 +360,10 @@
         display: block;
         text-align: center;
         border: 1px solid #ddd;
-        margin: 10px 0;
-        padding: 10px 10px;
+        margin: 5px 0;
+        padding: 5px 8px;
         color: #ea1f26;
+        font-size: 13px;
     }
 
     .footer_contact {
@@ -405,7 +406,7 @@
   position: absolute;
   width: 90px;
   right: 0px;
-  top: 7px;
+  top: 25px;
 }
 .imgmid001 {
   position: absolute;
