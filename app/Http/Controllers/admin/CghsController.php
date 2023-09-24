@@ -64,11 +64,11 @@ class CghsController extends Controller
         $newImageName =time().'-'.$request->name.'.'.$request->img->extension();
           $status='pending';
         $request->img->move(public_path('images'),$newImageName);
-      
+    
         // $newImageName=$request->file('img')->getClientOriginalName();
         // $request->file('img')->storeAs('public/images',$newImageName);
         $data=new graduated;
-       
+        
         $data->graduated_name=$request->graduated_name;
         $data->batch=$request->batch;
         $data->mobile_number=$request->mobile_number;
