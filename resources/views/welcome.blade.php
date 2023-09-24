@@ -570,7 +570,7 @@
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Graduated Name <sapn
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="subcategory_name" name="graduated_name"
+                            <input type="text" class="form-control" id="subcategory_name" required name="graduated_name"
                                 placeholder="Graduated Name" class="@error('graduated_name') is-invalid @enderror"
                                 value="{{old('graduated_name')}}" />
                             @error('graduated_name')
@@ -585,8 +585,8 @@
                         <div class="col-sm-10">
 
                             <select class="form-select" id="batch" name="batch" placeholder="Select Your Batch"
-                                class="@error('batch') is-invalid @enderror" value="{{old('batch')}}">
-                                <option selected disabled> Select Your Batch</option>
+                                required>
+                                <option selected disabled value=""> Select Your Batch</option>
                                 <option value="no batch">No batch</option>
                                 <option value="1980">1980</option>
                                 <option value="1981">1981</option>
@@ -644,7 +644,7 @@
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Mobile No <sapn
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="mobile_number" name="mobile_number"
+                            <input type="text" class="form-control" required id="mobile_number" name="mobile_number"
                                 placeholder="Mobile Number" placeholder="Select your batch"
                                 class="@error('mobile_number') is-invalid @enderror" value="{{old('mobile_number')}}" />
                             @error('mobile_number')
@@ -657,8 +657,9 @@
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Address <sapn
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="address" name="address" placeholder="Address"
-                                class="@error('address') is-invalid @enderror" value="{{old('address')}}" />
+                            <input type="text" class="form-control" required id="address" name="address"
+                                placeholder="Address" class="@error('address') is-invalid @enderror"
+                                value="{{old('address')}}" />
                             @error('address')
                             <strong class=" text-danger">{{ $message }}</strong>
                             @enderror
@@ -670,9 +671,10 @@
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
 
-                            <select class="form-select" id="blood_group" name="blood_group" placeholder="Blood Group"
-                                class="@error('blood_group') is-invalid @enderror" value="{{old('blood_group')}}">
-                                <option selected disabled>Select Your Blood Group</option>
+                            <select class="form-select" id="blood_group" required name="blood_group"
+                                placeholder="Blood Group" class="@error('blood_group') is-invalid @enderror"
+                                value="{{old('blood_group')}}">
+                                <option selected disabled value="">Select Your Blood Group</option>
                                 <option value="O(+)">O(+)</option>
                                 <option value="O(-)">O(-)</option>
                                 <option value="A(+)">A(+)</option>
@@ -693,13 +695,19 @@
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
 
-                            <select class="form-select" id="t-shirt" name="t_shirt" placeholder="T-Shirt Size"
+                            <select class="form-select" id="t-shirt" name="t_shirt" required placeholder="T-Shirt Size"
                                 class="@error('t_shirt') is-invalid @enderror" value="{{old('t_shirt')}}">
-                                <option selected disabled>Select Your T-shirt Size</option>
-                                <option value="M= Chest: 38”, Length: 26.5”">M= Chest: 38”, Length: 26.5”</option>
-                                <option value="L= Chest: 40”, Length: 27.5”">L= Chest: 40”, Length: 27.5”</option>
-                                <option value="XL= Chest: 42”, Length: 28.5”">XL= Chest: 42”, Length: 28.5”</option>
-                                <option value="XXL= Chest: 44”, Length: 29.5”">XXL= Chest: 44”, Length: 29.5”
+                                <option selected disabled value="">Select Your T-shirt Size</option>
+                                <option value="M= Chest: 38 inc & Length: 26.5 inc">M= Chest: 38 inc & Length: 26.5 inc
+                                </option>
+                                <option value="L= Chest: 40 inc & Length: 27.5 inc">L= Chest: 40 inc & Length: 27.5 inc
+                                </option>
+                                <option value="XL= Chest: 42 inc & Length: 28.5
+                                    inc">XL= Chest: 42 inc & Length: 28.5
+                                    inc</option>
+                                <option value="XXL= Chest: 44 inc & Length: 29.5
+                                    inc">XXL= Chest: 44 inc & Length: 29.5
+                                    inc
                                 </option>
                                 @error('t_shirt')
                                 <strong class=" text-danger">{{ $message }}</strong>
@@ -715,9 +723,10 @@
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
 
-                            <select class="form-select" id="profession" name="profession" placeholder="Profession"
-                                class="@error('profession') is-invalid @enderror" value="{{old('profession')}}">
-                                <option selected disabled>Select Your Profession</option>
+                            <select class="form-select" id="profession" name="profession" required
+                                placeholder="Profession" class="@error('profession') is-invalid @enderror"
+                                value="{{old('profession')}}">
+                                <option selected disabled value="">Select Your Profession</option>
                                 <option value="businessman">Businessman</option>
                                 <option value="doctor">Doctor</option>
                                 <option value="engineer">Engineer</option>
@@ -785,7 +794,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Registration Fee </label>
                         <div class="col-sm-10">
-                            <p class='note_text'>1200</p>
+                            <p class='note_text'>1020</p>
                         </div>
                     </div>
 
@@ -793,7 +802,7 @@
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Guest Fee (per
                             person)</label>
                         <div class="col-sm-10">
-                            <p class='note_text'>500 <sapn class='text-danger'>(t-shirt not included) *</sapn>
+                            <p class='note_text'>700 <sapn class='text-danger'>(t-shirt not included) *</sapn>
                             </p>
                         </div>
                     </div>
@@ -801,7 +810,7 @@
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Total</label>
                         <div class="col-sm-10">
                             <p class='note_text' name='total' id='total'>
-                                1200
+                                1020
                             </p>
                             <input name="total" id="name" value="{{ 1200}}" type="hidden">
                         </div>
@@ -811,7 +820,7 @@
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Image <sapn class="text-danger">
                                 *</sapn></label>
                         <div class="col-sm-10">
-                            <input class="form-control" type="file" name='img' id="formFile"
+                            <input class="form-control" type="file" required name='img' id="formFile"
                                 class="@error('img') is-invalid @enderror" value="{{old('img')}}" />
                             @error('img')
                             <strong class=" text-danger">{{ $message }}</strong>
@@ -823,7 +832,7 @@
                         <label class="col-sm-2 col-form-label" for="basic-default-name"> Payment Number <sapn
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="bkash" name="payment"
+                            <input type="text" class="form-control" required id="bkash" name="payment"
                                 placeholder=" Payment number" class="@error('payment') is-invalid @enderror"
                                 value="{{old('payment')}}" />
 
@@ -839,7 +848,7 @@
                         <label class="col-sm-2 col-form-label" for="basic-default-name"> Transaction id <sapn
                                 class="text-danger">*</sapn></label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="transaction_id" name="transaction_id"
+                            <input type="text" required class="form-control" id="transaction_id" name="transaction_id"
                                 placeholder=" Transaction Id" class="@error('transaction_id') is-invalid @enderror"
                                 value="{{old('transaction_id')}}" />
                             @error('transaction_id')
@@ -932,7 +941,7 @@
         if (evt.target.type === "radio") {
             // Populate the results area with the value of the clicked element
             const inputValue = evt.target.value
-            total.innerHTML = (inputValue * 500) + 1200;
+            total.innerHTML = (inputValue * 700) + 1020;
         }
     });
     </script>

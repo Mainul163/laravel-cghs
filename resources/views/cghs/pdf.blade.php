@@ -87,6 +87,13 @@
 
 
     <div class="pdf_main_wrap">
+
+        <img class="imgtop001"
+            src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'top_lft.png')))}}"
+            alt="">
+        <img class="imgmid001"
+            src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'bg_img.png')))}}"
+            alt="">
         <div class="top_header">
             <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'CGHS.png')))}}"
                 alt="" width="120">
@@ -94,7 +101,7 @@
                 <h3 class="top_title">CHAKARIA GOVT HIGH SCHOOL</h3>
                 EIIN No: 106169, Established: 1930, <br> Address: Chakaria-4741, Coxs Bazar, Chattogram.
                 <br>
-                <h3 class="hed_last">CGHS Alumni Association - 2024</h3>
+                <h3 class="hed_last">CGHS Alumni Association</h3>
             </div>
 
         </div>
@@ -105,26 +112,26 @@
                     <tbody>
                         <tr>
                             <th>Program Date</th>
-                            <td>1st July 2023</td>
+                            <td>10th April, 2023 (9am - 6pm)</td>
                         </tr>
-                        <tr>
+                        {{-- <tr>
                             <th>Program Time</th>
-                            <td>9am - 6pm</td>
-                        </tr>
+                            <td></td>
+                        </tr> --}}
                         <tr>
                             <th>Program Vanue</th>
-                            <td>Dhaka, Banani</td>
+                            <td>CHAKARIA GOVT HIGH SCHOOL</td>
                         </tr>
                         <tr>
                             <th>Regestration Id</th>
-                            <td>{{$row->id+1110000}}</td>
+                            <td>{{$row->reg_id}}</td>
                         </tr>
                         <tr>
                             <th>Regestration Time</th>
                             <td>{{$row->date}}</td>
                         </tr>
                         <tr>
-                            <th>Graduated Name</th>
+                            <th>Participate Name</th>
                             <td>{{$row->graduated_name}}</td>
                         </tr>
 
@@ -149,13 +156,13 @@
             </div>
             <div class="reg_ings_section">
                 <div class="bar_cd">
-                    {!! DNS1D::getBarcodeHTML("$row->id"+1110000, 'C128')!!}
+                    {!! DNS1D::getBarcodeHTML("$row->reg_id", 'C128')!!}
                     <p>Regestration Barcode</p>
                 </div><br>
                 <img src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('images/'.$row->img)))}}"" width='100%' height='200px' alt='image'
                   class=" border rounded" />
 
-                <p>Picture</p>
+                <p>Participate Picture</p>
             </div>
 
         </div>
@@ -205,6 +212,9 @@
             <P>**Batch Representation will handover Invitation letter to you**<br>
                 **When You Came Pleace carrey your Invitation card** </P>
         </div>
+        <img class="imgbtn001"
+            src="{{'data:image/png;base64,'.base64_encode(file_get_contents(public_path('logo/'.'btn_img.png')))}}"
+            alt="">
 
 
     </div>
@@ -246,6 +256,8 @@
         width: 600px;
         /* border: 1px solid #ddd;
         padding: 40px 30px; */
+        position: relative;
+
     }
 
     .top_header {
@@ -253,7 +265,7 @@
         clear: both;
         width: 100%;
         position: relative;
-        height: 170px;
+        height: 150px;
 
     }
 
@@ -283,7 +295,7 @@
     }
 
     .reg_tbl_info {
-        width: 350px;
+        width: 380px;
         position: absolute;
         left: 0;
         padding-right: 20px;
@@ -298,9 +310,14 @@
         top: 50px;
     }
 
+    .reg_footer p {
+        margin: 0;
+        padding: 0;
+    }
+
     .pdf_Reg_info {
         position: relative;
-        height: 390px;
+        height: 360px;
     }
 
     .reg_tbl_info {}
@@ -317,9 +334,9 @@
     .reg_table tr th,
     .reg_table tr td {
         border: 1px solid #dee2e6;
-        padding: 5px 20px;
+        padding: 5px 10px;
         text-align: left;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .reg_table tr th {}
@@ -335,7 +352,7 @@
         border: 1px solid #dee2e6;
         padding: 4px 20px;
         text-align: left;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .table_btm {
@@ -351,9 +368,10 @@
         display: block;
         text-align: center;
         border: 1px solid #ddd;
-        margin: 10px 0;
-        padding: 10px 10px;
+        margin: 5px 0;
+        padding: 5px 8px;
         color: #ea1f26;
+        font-size: 13px;
     }
 
     .footer_contact {
@@ -380,10 +398,36 @@
     }
 
     .reg_ings_section img {
-        width: 130px;
+        width: 190px;
         object-fit: cover;
         height: 200px;
-        margin-top: 70px;
+        margin-top: 40px;
+    }
+
+    .bar_cd p {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .imgbtn001 {
+        width: 100%;
+    }
+
+    .imgtop001 {
+        position: absolute;
+        width: 90px;
+        right: 0px;
+        top: 25px;
+    }
+
+    .imgmid001 {
+        position: absolute;
+        width: 470px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        z-index: -1;
+        opacity: 0.5;
     }
     </style>
 
